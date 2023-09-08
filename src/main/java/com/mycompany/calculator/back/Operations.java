@@ -51,8 +51,8 @@ public interface Operations {
     double rest(double a, double b);
     boolean minusEqualTo(double a, double b);
     boolean greaterIgualQue(double a, double b);
-    double backwardUnitIncrement(double a, double b);
-    double forwardUnitIncrement(double a, double b);
+    double backwardUnitIncrement(double a);
+    double forwardUnitIncrement(double a);
     // Byte operations
     double byteChange(byte a, byte b);
     double leftByteShift(byte a, byte b);
