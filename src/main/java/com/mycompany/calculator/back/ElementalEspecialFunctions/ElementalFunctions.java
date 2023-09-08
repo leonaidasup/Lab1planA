@@ -116,23 +116,23 @@ public class ElementalFunctions {
     public int concatenation(int a, int b){
         return 0;
     };
-    public short[] concatenation(short[] a, short[] b){
-        return null;
+    public short concatenation(short[] a, short[] b){
+        return 0;
     };
-    public double[] concatenation(double[] a, double[] b){
-        return null;
+    public double concatenation(double[] a, double[] b){
+        return 0;
     };
-    public float[] concatenation(float[] a, float[] b){
-        return null;
+    public float concatenation(float[] a, float[] b){
+        return 0;
     };
-    public boolean[] concatenation(boolean[] a, boolean[] b){
-        return null;
+    public boolean concatenation(boolean[] a, boolean[] b){
+        return false;
     };
-    public byte[] concatenation(byte[] a, byte[] b){
-        return null;
+    public byte concatenation(byte[] a, byte[] b){
+        return 0;
     };
-    public char[] concatenation(char[] a, char[] b){
-        return null;
+    public char concatenation(char[] a, char[] b){
+        return '0';
     };
     // Objets operations
     // Primitive operations
