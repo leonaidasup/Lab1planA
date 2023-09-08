@@ -7,7 +7,7 @@ package com.mycompany.calculator;
 
 /**
  *
- * @author leona
+ * @author Leonardo Amaris
  */
 public class Calculator {
 

@@ -6,7 +6,7 @@ package com.mycompany.calculator.front;
 
 /**
  *
- * @author leona
+ * @author Leonardo Amaris
  */
 public class view {
     public static void main(String[] args) {

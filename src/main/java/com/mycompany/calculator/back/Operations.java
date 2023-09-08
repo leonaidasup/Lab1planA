@@ -6,19 +6,53 @@ package com.mycompany.calculator.back;
 
 /**
  *
- * @author leona
+ * @author Leonardo Amaris
+ * Se crearon las funciones correspondientes a operadores aritmeticos:
+ *  addition
+ *  subtraction
+ *  multiplication
+ *  division
+ *  rest
+ *  minusEqualTo
+ *  graterEqualTo
+ *  backwardUnitIncrement
+ *  forwartUnitIncrement
+ * 
+ * Operadores en bytes:
+ *  byteChange
+ *  lefByteShift
+ *  signPreservingRightByteShift
+ *  zeroExtendedRightByteShift
+ *  byteChangeAND
+ *  byteChangeXOR
+ *  byteChangeOR
+ * 
+ * Operadores booleanos:
+ *  negation
+ *  booleanProduct(boolean a, boolean b)
+ *  booleanAddition
+ *  booleanAnd
+ *  booleanOr
+ *  conditionalOperation
+ * 
+ * Operadores de cadena:
+ *  concatenation
+ * 
+ * Operadores primitivos
+ *  equal
+ *  different
  */
 public interface Operations {
     // Aritmetics operations
     double addition(double a, double b);
     double subtraction(double a, double b);
     double multiplication(double a, double b);
-    double divsion(double a, double b);
+    double division(double a, double b);
     double rest(double a, double b);
     boolean minusEqualTo(double a, double b);
     boolean greaterIgualQue(double a, double b);
     double backwardUnitIncrement(double a, double b);
-    double forwardUnitIncremen(double a, double b);
+    double forwardUnitIncrement(double a, double b);
     // Byte operations
     double byteChange(byte a, byte b);
     double leftByteShift(byte a, byte b);
