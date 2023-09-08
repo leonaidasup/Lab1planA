@@ -8,6 +8,7 @@ package com.mycompany.calculator;
 /**
  *
  * @author Leonardo Amaris
+ * Inicializador de la calculadora.
  */
 public class Calculator {
 
