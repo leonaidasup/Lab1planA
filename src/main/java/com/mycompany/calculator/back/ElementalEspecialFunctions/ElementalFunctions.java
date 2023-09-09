@@ -71,6 +71,7 @@ public class ElementalFunctions {
     public double forwardUnitIncrement(double a){
         return a - 1;
     };
+    
     // Byte operations
     public double byteChange(double a){
         return 0;
@@ -109,8 +110,9 @@ public class ElementalFunctions {
     public boolean booleanAddition(boolean a, boolean b){
         return booleanOr(a, b);
     };
-    public boolean conditionalOperation(boolean a, boolean b){
-        return false; // falta trabajar
+    public Object conditionalOperation(boolean condicion, Object valorVerdadero, Object valorFalso){
+        return condicion?valorVerdadero:valorFalso;
+    //la funcion es de tipo objeto para permitir el manejo de varios tipos de dato como resultado 
     };
     // Cadena operations
     public int concatenation(int a, int b){
