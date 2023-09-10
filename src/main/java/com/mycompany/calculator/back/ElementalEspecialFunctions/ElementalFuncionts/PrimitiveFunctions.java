@@ -13,46 +13,47 @@ package com.mycompany.calculator.back.ElementalEspecialFunctions.ElementalFuncio
  *  different
  */
 public class PrimitiveFunctions {
-    public boolean equal(int a, int b){
+    public PrimitiveFunctions(){}
+    public static boolean equal(int a, int b){
         return a == b;
     };
-    public boolean equal(short a, short b){
+    public static boolean equal(short a, short b){
         return a == b;
     };
-    public boolean equal(double a, double b){
+    public static boolean equal(double a, double b){
         return a == b;
     };
-    public boolean equal(float a, float b){
+    public static boolean equal(float a, float b){
         return a == b;
     };
-    public boolean equal(boolean a, boolean b){
+    public static boolean equal(boolean a, boolean b){
         return a == b;
     };
-    public boolean equal(byte a, byte b){
+    public static boolean equal(byte a, byte b){
         return a == b;
     };
-    public boolean equal(char a, char b){
+    public static boolean equal(char a, char b){
         return a == b;
     };
-    public boolean different(int a, int b){
+    public static boolean different(int a, int b){
         return a != b;
     };
-    public boolean different(short a, short b){
+    public static boolean different(short a, short b){
         return a != b;
     };
-    public boolean different(double a, double b){
+    public static boolean different(double a, double b){
         return a != b;
     };
-    public boolean different(float a, float b){
+    public static boolean different(float a, float b){
         return a != b;
     };
-    public boolean different(boolean a, boolean b){
+    public static boolean different(boolean a, boolean b){
         return a != b;
     };
-    public boolean different(byte a, byte b){
+    public static boolean different(byte a, byte b){
         return a != b;
     };
-    public boolean different(char a, char b){
+    public static boolean different(char a, char b){
         return a != b;
     };
 }

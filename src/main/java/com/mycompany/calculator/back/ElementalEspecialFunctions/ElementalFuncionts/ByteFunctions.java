@@ -18,34 +18,26 @@ package com.mycompany.calculator.back.ElementalEspecialFunctions.ElementalFuncio
  *  byteChangeOR
  */
 public class ByteFunctions {
-    public int scrollingBitleft(int num, int cantidadBits){
-        return num << cantidadBits;
-    }
-    public int scrollingBitRight(int num, int cantidadBits){
-        return num >> cantidadBits;
-    }
-    public int scrollingBitRightWithCero(int num, int cantidadBits){
-        return num >> cantidadBits;
-    }
-    public double leftByteShift(byte a, byte b){
-        return 0;
-    };
-    public double signPreservingRightByteShift(byte a, byte b){
-        return 0;
-    };
-    public double zeroExtendedRightByteShift(byte a, byte b){
-        return 0;
-    };
-    public double byteChangeAND(byte a, byte b){
-        return 0;
-    };
-    public double byteChangeXOR(byte a, byte b){
-        return 0;
-    };
-    public double byteChangeOR(byte a, byte b){
-        return 0;
-    };
-    public int BitChange(int a){
+    public ByteFunctions(){}
+    public static int ByteChange(int a){
         return ~a;
     }
+    public static int leftByteShift(int num, int cantidadBits){
+        return num << cantidadBits;
+    }
+    public static int signPreservingRightByteShift(int num, int cantidadBits){
+        return num >> cantidadBits;
+    }
+    public static int zeroExtendedRightByteShift(int num, int cantidadBits){
+        return num >>> cantidadBits;
+    }
+    public static double byteChangeAND(byte a, byte b){
+        return a & b;
+    };
+    public static double byteChangeXOR(byte a, byte b){
+        return a ^ b;
+    };
+    public static double byteChangeOR(byte a, byte b){
+        return a | b;
+    }; 
 }

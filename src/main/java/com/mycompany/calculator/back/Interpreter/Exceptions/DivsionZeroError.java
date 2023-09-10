@@ -6,10 +6,10 @@ package com.mycompany.calculator.back.Interpreter.Exceptions;
 
 /**
  *
- * @author Leonardo_Amaris
+ * @author leona
  */
-public class TypeError extends Exception {
-    public TypeError(String msj) {
-        super(msj);
+public class DivsionZeroError extends Exception {
+    public DivsionZeroError() {
+        super("Division por cero.");
     }
 }

@@ -14,12 +14,12 @@ public class Interpreter {
     private String var1;
     private String var2;
     private String operator;
-    private Object operatorTipe;
-    public Interpreter(String var1, String var2, String operator, String operatorTipe) {
+    private Object operatorType;
+    public Interpreter(String var1, String var2, String operator, String operatorType) {
         this.var1 = var1;
         this.var2 = var2;
         this.operator = operator;
-        this.operatorTipe = operatorTipe;
+        this.operatorType = operatorType;
     }
     public void setVar1(String var1) {
         this.var1 = var1;
@@ -31,15 +31,15 @@ public class Interpreter {
         this.operator = operator;
     }
     public void setOperatorTipe(Object operatorTipe) {
-        this.operatorTipe = operatorTipe;
+        this.operatorType = operatorTipe;
     }
     public Object outPut(){
-       if (this.operatorTipe instanceof Double) {
-           return new ArithmeticInterpreter().outPut(var1, var2, operator);
-       } else if (this.operatorTipe instanceof Boolean) {
-           return new BooleanInterpreter().outPut(var1, var2, operator);
+       if (this.operatorType instanceof Double) {
+           return ArithmeticInterpreter.outPut(var1, var2, operator);
+       } else if (this.operatorType instanceof Boolean) {
+           return BooleanInterpreter.outPut(var1, var2, operator);
        } else {
-           return new ByteInterpreter().outPut(var1, var2, operator);
+           return ByteInterpreter.outPut(var1, var2, operator);
        }
     }
 }

@@ -11,13 +11,13 @@ import com.mycompany.calculator.back.Interpreter.Exceptions.TypeError;
  */
 public class BooleanInterpreter {
     public BooleanInterpreter() {}
-    public boolean convertBoolean(String var) throws TypeError{
+    public static boolean convertBoolean(String var) throws TypeError{
         if (!"true".equals(var) || !"false".equals(var)) {
             throw new TypeError("La variable " + var + " no es de tipo Booleana.");
         }
         return Boolean.parseBoolean(var);
     }
-    public Object outPut(String var1, String var2, String operator){
+    public static Object outPut(String var1, String var2, String operator){
        try {
            return new BooleanOperator().result(convertBoolean(var1), convertBoolean(var2), operator);
        } catch (TypeError e){

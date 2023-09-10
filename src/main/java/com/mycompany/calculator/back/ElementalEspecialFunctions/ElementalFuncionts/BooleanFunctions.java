@@ -17,22 +17,23 @@ package com.mycompany.calculator.back.ElementalEspecialFunctions.ElementalFuncio
  *  conditionalOperation
  */
 public class BooleanFunctions {
-    public boolean negation(boolean a){
+    public BooleanFunctions(){}
+    public static boolean negation(boolean a){
         return !a;
     };
-    public boolean booleanAnd(boolean a, boolean b){
+    public static boolean booleanAnd(boolean a, boolean b){
+        return a & b;
+    };
+    public static boolean booleanOr(boolean a, boolean b){
+        return a | b;
+    };
+    public static boolean booleanProduct(boolean a, boolean b){
         return a && b;
     };
-    public boolean booleanOr(boolean a, boolean b){
+    public static boolean booleanAddition(boolean a, boolean b){
         return a || b;
     };
-    public boolean booleanProduct(boolean a, boolean b){
-        return booleanAnd(a, b);
-    };
-    public boolean booleanAddition(boolean a, boolean b){
-        return booleanOr(a, b);
-    };
-    public boolean exclusiveAddition(boolean a, boolean b){ //-J
-        return a^b;
+    public static boolean exclusiveAddition(boolean a, boolean b){ //-J
+        return a ^ b;
     }
 }

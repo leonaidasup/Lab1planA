@@ -13,29 +13,12 @@ package com.mycompany.calculator.back.ElementalEspecialFunctions.ElementalFuncio
  *  concatenation
  */
 public class ObjectFuntioncs {
-    public Object conditionalOperation(boolean condicion, Object valorVerdadero, Object valorFalso){ //-J
+    public ObjectFuntioncs(){}
+    public static Object conditionalOperation(boolean condicion, Object valorVerdadero, Object valorFalso){ //-J
         return condicion?valorVerdadero:valorFalso;
     //la funcion es de tipo objeto para permitir el manejo de varios tipos de dato como resultado 
     };
-    public int concatenation(int a, int b){
-        return 0;
-    };
-    public short concatenation(short[] a, short[] b){
-        return 0;
-    };
-    public double concatenation(double[] a, double[] b){
-        return 0;
-    };
-    public float concatenation(float[] a, float[] b){
-        return 0;
-    };
-    public boolean concatenation(boolean[] a, boolean[] b){
-        return false;
-    };
-    public byte concatenation(byte[] a, byte[] b){
-        return 0;
-    };
-    public char concatenation(char a, char b){
-        return '0';
+    public static String concatenation(String a, String b){
+        return a + b;
     };
 }

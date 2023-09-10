@@ -20,37 +20,32 @@ package com.mycompany.calculator.back.ElementalEspecialFunctions.ElementalFuncio
  *  forwartUnitIncrement
  */
 public class ArithmeticFunctions {
-    public double addition(double a, double b){ // Leonardo
+    public ArithmeticFunctions(){}
+    public static double addition(double a, double b){ // Leonardo
         return a + b;
     };
-    public double subtraction(double a, double b){ // Leonardo
+    public static double subtraction(double a, double b){ // Leonardo
         return a - b;
     };
-    public double multiplication(double a, double b){ // Leonardo
+    public static double multiplication(double a, double b){ // Leonardo
         return a * b;
     };
-    public double division(double a, double b){ // Leonardo
+    public static double division(double a, double b){ // Leonardo
         return a / b;
     };
-    public double rest(double a, double b){ // Leonardo
+    public static double rest(double a, double b){ // Leonardo
         return a - (int) division(a, b);
     };
-    public boolean minusEqualTo(double a, double b){ // Leonardo
+    public static boolean minusEqualTo(double a, double b){ // Leonardo
         return a <= b;
     };
-    public boolean greaterIgualQue(double a, double b){ // Leonardo
+    public static boolean greaterIgualQue(double a, double b){ // Leonardo
         return a >= b;
     };
-    public double backwardUnitIncrement(double a){ // Leonardo
+    public static double backwardUnitIncrement(double a){ // Leonardo
         return a ++;
     };
-    public double forwardUnitIncrement(double a){ // Leonardo
+    public static double forwardUnitIncrement(double a){ // Leonardo
         return a --;
     };
-    public double unitSum(double a){ //-J
-        return + a;
-    }
-    public double unitSubtraction(double a){ //-J
-        return - a;
-    }
 }
