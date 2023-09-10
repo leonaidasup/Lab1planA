@@ -30,13 +30,13 @@ public class ArithmeticOperator {
             }
             case "/" -> {
                 if (var2 == 0) {
-                    return new DivsionZeroError();
+                    throw new DivsionZeroError();
                 }
                 return ArithmeticFunctions.division(var1, var2);
             }
             case "%" -> {
                 if (var2 == 0) {
-                    return new DivsionZeroError();
+                    throw new DivsionZeroError();
                 }
                 return ArithmeticFunctions.rest(var1, var2);
             }
