@@ -12,6 +12,5 @@ package com.mycompany.calculator.back.Interpreter;
  */ 
 public class Errors {   
     public static void main(String[] args) {
-        System.out.println(Byte.parseByte("0"));
     }
 }

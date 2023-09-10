@@ -15,7 +15,7 @@ public class ArithmeticInterpreter {
     }
     public Object outPut(String var1, String var2, String operator){
         try {
-            return new ArithmeticOperator(convertDouble(var1), convertDouble(var2), operator).result();
+            return new ArithmeticOperator().result(convertDouble(var1), convertDouble(var2), operator);
         } catch (NumberFormatException e) {
             return "error";
         }

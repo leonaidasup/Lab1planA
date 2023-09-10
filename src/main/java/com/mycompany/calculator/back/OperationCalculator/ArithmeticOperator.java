@@ -10,15 +10,12 @@ package com.mycompany.calculator.back.OperationCalculator;
  *  resuelve las operaciones dadas por el interpretador.
  */
 public class ArithmeticOperator {
-    private double var1;
-    private double var2;
-    private String operator;
-    public ArithmeticOperator(double var1, double var2, String operator) {
-        this.var1 = var1;
-        this.var2 = var2;
-        this.operator = operator;
-    }
-    public double result() {
-        return 0;
+    public ArithmeticOperator() {}
+    public Object result(double var1, double var2, String operator){
+        try {
+            return 0;
+        } catch (NumberFormatException e) {
+            return "error";
+        }
     }
 }
