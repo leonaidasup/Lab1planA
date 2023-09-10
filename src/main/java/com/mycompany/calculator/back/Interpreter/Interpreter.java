@@ -9,6 +9,8 @@ import com.mycompany.calculator.back.OperationCalculator.*;
  * @author Leonardo_Amaris
  *  Interpreta la decisiones tomadas por el usuario ademas de verificar que variables
  *  y su operacion de tipo presente el mismo tipo de variable.
+ *  
+ *  - outPut
  */
 public class Interpreter {
     private String var1;

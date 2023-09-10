@@ -9,6 +9,11 @@ import com.mycompany.calculator.back.Interpreter.Exceptions.TypeError;
 /**
  *
  * @author Leonardo_Amaris
+ *  Resuelve las operaciones dadas por el interpretador para el tipo de variable.
+ * 
+ *  - result
+ *  - convertDouble
+ *  - outPut
  */
 public class BooleanOperator {
     public BooleanOperator() {}

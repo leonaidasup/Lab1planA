@@ -6,7 +6,8 @@ package com.mycompany.calculator.back.Interpreter.Exceptions;
 
 /**
  *
- * @author leona
+ * @author Leonardo_Amaris
+ *  Excepccion de intento de division sobre cero.
  */
 public class DivsionZeroError extends Exception {
     public DivsionZeroError() {

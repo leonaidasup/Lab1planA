@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.calculator.back.ElementalFunctions;
-
 /**
  *
  * @author Leonardo_Amaris arrietajh
@@ -11,6 +10,8 @@ package com.mycompany.calculator.back.ElementalFunctions;
  * Operadores de object:
  *  conditionalOperation
  *  concatenation
+ *  equal
+ *  different
  */
 public class ObjectFuntioncs {
     public ObjectFuntioncs(){}

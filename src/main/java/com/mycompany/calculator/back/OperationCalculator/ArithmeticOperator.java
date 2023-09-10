@@ -9,7 +9,11 @@ import com.mycompany.calculator.back.Interpreter.Exceptions.TypeError;
 /**
  *
  * @author Leonardo_Amaris
- *  resuelve las operaciones dadas por el interpretador.
+ *  Resuelve las operaciones dadas por el interpretador para el tipo de variable.
+ * 
+ *  - result
+ *  - convertDouble
+ *  - outPut
  */
 public class ArithmeticOperator {
     public ArithmeticOperator() {}
