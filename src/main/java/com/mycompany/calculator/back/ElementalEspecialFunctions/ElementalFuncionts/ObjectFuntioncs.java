@@ -15,10 +15,16 @@ package com.mycompany.calculator.back.ElementalEspecialFunctions.ElementalFuncio
 public class ObjectFuntioncs {
     public ObjectFuntioncs(){}
     public static Object conditionalOperation(boolean condicion, Object valorVerdadero, Object valorFalso){ //-J
-        return condicion?valorVerdadero:valorFalso;
+        return condicion ? valorVerdadero : valorFalso;
     //la funcion es de tipo objeto para permitir el manejo de varios tipos de dato como resultado 
     };
     public static String concatenation(String a, String b){
         return a + b;
+    };
+    public static boolean equal(Object a, Object b){
+        return a == b;
+    };
+    public static boolean different(Object a, Object b){
+        return a != b;
     };
 }

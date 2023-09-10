@@ -34,7 +34,7 @@ public class ArithmeticFunctions {
         return a / b;
     };
     public static double rest(double a, double b){ // Leonardo
-        return a - (int) division(a, b);
+        return a % b;
     };
     public static boolean minusEqualTo(double a, double b){ // Leonardo
         return a <= b;
