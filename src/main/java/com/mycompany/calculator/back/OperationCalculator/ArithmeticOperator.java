@@ -5,6 +5,7 @@
 package com.mycompany.calculator.back.OperationCalculator;
 import com.mycompany.calculator.back.ElementalEspecialFunctions.ElementalFuncionts.ArithmeticFunctions;
 import com.mycompany.calculator.back.Interpreter.Exceptions.DivsionZeroError;
+import com.mycompany.calculator.back.Interpreter.Exceptions.TypeError;
 /**
  *
  * @author Leonardo_Amaris
@@ -12,7 +13,7 @@ import com.mycompany.calculator.back.Interpreter.Exceptions.DivsionZeroError;
  */
 public class ArithmeticOperator {
     public ArithmeticOperator() {}
-    public Object result(double var1, double var2, String operator) throws DivsionZeroError{
+    public static Object result(double var1, double var2, String operator) throws DivsionZeroError{
         switch (operator) {
             case "+" -> {
                 return ArithmeticFunctions.addition(var1, var2);
@@ -49,5 +50,19 @@ public class ArithmeticOperator {
             }
         } 
         return null;
+    }
+    public static double convertDouble(String var) throws TypeError{
+        try {
+            return Integer.parseInt(var);
+        } catch (NumberFormatException e) {
+            throw new TypeError("La variable " + var + " no es de tipo numerica.");
+        }
+    }
+    public static Object outPut(String var1, String var2, String operator){
+        try {
+            return result(convertDouble(var1), convertDouble(var2), operator);
+        } catch (TypeError | DivsionZeroError e) {
+            return e;
+        }
     }
 }

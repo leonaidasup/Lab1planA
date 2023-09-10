@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.calculator.back.Interpreter;
-import com.mycompany.calculator.back.Interpreter.ElementalInterpreters.*;
+import com.mycompany.calculator.back.OperationCalculator.*;
 /**
  *
  * @author Leonardo_Amaris
@@ -35,11 +35,11 @@ public class Interpreter {
     }
     public Object outPut(){
        if (this.operatorType instanceof Double) {
-           return ArithmeticInterpreter.outPut(var1, var2, operator);
+           return ArithmeticOperator.outPut(var1, var2, operator);
        } else if (this.operatorType instanceof Boolean) {
-           return BooleanInterpreter.outPut(var1, var2, operator);
+           return BooleanOperator.outPut(var1, var2, operator);
        } else {
-           return ByteInterpreter.outPut(var1, var2, operator);
+           return ByteOperator.outPut(var1, var2, operator);
        }
     }
 }

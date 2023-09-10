@@ -10,10 +10,13 @@ package com.mycompany.calculator.back.ElementalEspecialFunctions;
  * Contiene las funciones especiales de la calculadora.
  */
 public class EspecialFunctions {
-    public static int odd_sum(int a) {
-        return a == 0 ? 0 : 2 * a - 1 + odd_sum(a - 1);
+    public static int oddSum(int a, int b) {
+        return a == 0 ? 0 : 2 * a - 1 + b + oddSum(a - 1, b); // a ** 2
+    }
+    public static int NicomacoCube(int a) {
+        return oddSum(a, a * (a - 1) + 1);
     }
     public static void main(String[] args) {
-        System.out.println(odd_sum(4));
+        System.out.println(NicomacoCube(4));
     }
 }
