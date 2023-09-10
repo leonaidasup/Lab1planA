@@ -3,12 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.calculator.back.Interpreter;
+import com.mycompany.calculator.back.Interpreter.Errors;
 import com.mycompany.calculator.back.OperationCalculator.*;
-
 /**
  *
  * @author Leonardo.amaris
- *  Interpreta la decisiones tomadas por el usuario.
+ *  Interpreta la decisiones tomadas por el usuario ademas de verificar que variables
+ *  y su operacion de tipo presente el mismo tipo de variable.
  */
 public class Interpreter {
     private String var1;
@@ -44,12 +45,14 @@ public class Interpreter {
     }
     public Object outPut(){
        if (this.operatorTipe instanceof Double) {
-           return new ArithmeticOperator(convertDouble(var1), convertDouble(var2), operator).result();
-       }
-       else if (this.operatorTipe instanceof Boolean) {
+           try {
+               return new ArithmeticOperator(convertDouble(var1), convertDouble(var2), operator).result();
+           } catch (NumberFormatException e) {
+               return null;
+           }
+       } else if (this.operatorTipe instanceof Boolean) {
            return new BooleanOperator(convertBoolean(var1), convertBoolean(var2), operator).result();
-       }
-       else {
+       } else {
            return new ByteOperator(convertByte(var1), convertByte(var2), operator).result();
        }
     }

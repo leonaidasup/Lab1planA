@@ -18,6 +18,6 @@ public class BooleanOperator {
         this.operator = operator;
     }
     public boolean result() {
-        return false;
+        return true;
     }
 }

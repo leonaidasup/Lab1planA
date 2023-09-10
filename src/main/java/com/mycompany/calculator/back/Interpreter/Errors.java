@@ -7,9 +7,11 @@ package com.mycompany.calculator.back.Interpreter;
 /**
  *
  * @author Leonardo.amaris
- *  Esta clase contiene las rutas alternativas para solucion de errores generados
- *  por el usuario.
+ *  Esta clase recibe los errores generador por el usuario al hacer operaciones
+ *  no permitidas.
  */ 
-public class Errors {
-    
+public class Errors {   
+    public static void main(String[] args) {
+        System.out.println(Byte.parseByte("0"));
+    }
 }

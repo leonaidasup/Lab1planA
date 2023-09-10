@@ -66,10 +66,10 @@ public class ElementalFunctions {
         return a >= b;
     };
     public double backwardUnitIncrement(double a){
-        return a + 1;
+        return a ++;
     };
     public double forwardUnitIncrement(double a){
-        return a - 1;
+        return a --;
     };
     public double unitSum(double a){ //-J
         return +a;
