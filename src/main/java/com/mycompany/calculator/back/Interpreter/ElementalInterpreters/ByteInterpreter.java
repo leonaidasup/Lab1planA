@@ -4,23 +4,19 @@
  */
 package com.mycompany.calculator.back.Interpreter.ElementalInterpreters;
 import com.mycompany.calculator.back.OperationCalculator.ByteOperator;
-import com.mycompany.calculator.back.Interpreter.Exceptions.TypeError;
 /**
  *
  * @author Leonardo_Amaris
  */
 public class ByteInterpreter {
     public ByteInterpreter() {}
-    public static byte convertByte(String var) throws TypeError {
-        if (!"1".equals(var) || !"0".equals(var)){
-            throw new TypeError("La variable " + var + " no es de tipo Byte.");
-        }
-        return Byte.parseByte(var);
+    public static int convertByte(String var) {
+        return Integer.parseInt(var);
     }
     public static Object outPut(String var1, String var2, String operator){
         try {
-            return new ByteOperator(convertByte(var1), convertByte(var2), operator).result();
-        } catch (TypeError e){
+            return ByteOperator.result(convertByte(var1), convertByte(var2), operator);
+        } catch (NumberFormatException e){
             return "error";
         }
     }

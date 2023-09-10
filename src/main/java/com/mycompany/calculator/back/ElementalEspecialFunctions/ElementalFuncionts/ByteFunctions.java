@@ -22,22 +22,22 @@ public class ByteFunctions {
     public static int ByteChange(int a){
         return ~a;
     }
-    public static int leftByteShift(int num, int cantidadBits){
-        return num << cantidadBits;
-    }
-    public static int signPreservingRightByteShift(int num, int cantidadBits){
-        return num >> cantidadBits;
-    }
-    public static int zeroExtendedRightByteShift(int num, int cantidadBits){
-        return num >>> cantidadBits;
-    }
-    public static double byteChangeAND(byte a, byte b){
+    public static int byteChangeAND(int a, int b){
         return a & b;
     };
-    public static double byteChangeXOR(byte a, byte b){
+    public static int byteChangeXOR(int a, int b){
         return a ^ b;
     };
-    public static double byteChangeOR(byte a, byte b){
+    public static int byteChangeOR(int a, int b){
         return a | b;
     }; 
+    public static int leftByteShift(int a, int b){
+        return a << b;
+    }
+    public static int signPreservingRightByteShift(int a, int b){
+        return a >> b;
+    }
+    public static int zeroExtendedRightByteShift(int a, int b){
+        return a >>> b;
+    }
 }
