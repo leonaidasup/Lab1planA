@@ -8,8 +8,8 @@ package com.mycompany.calculator.back.Interpreter.Exceptions;
  *
  * @author Leonardo_Amaris
  */
-public class BooleanByteException extends Exception {
-    public BooleanByteException(String mensaje) {
+public class TypeError extends Exception {
+    public TypeError(String mensaje) {
         super(mensaje);
     }
 }
