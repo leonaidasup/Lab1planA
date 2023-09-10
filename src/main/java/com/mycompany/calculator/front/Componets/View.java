@@ -6,7 +6,7 @@ package com.mycompany.calculator.front.Componets;
 
 /**
  *
- * @author ASUS
+ * @author ....
  */
 public class View extends javax.swing.JFrame {
 
