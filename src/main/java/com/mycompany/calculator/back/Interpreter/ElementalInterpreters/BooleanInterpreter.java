@@ -21,7 +21,7 @@ public class BooleanInterpreter {
        try {
            return new BooleanOperator().result(convertBoolean(var1), convertBoolean(var2), operator);
        } catch (TypeError e){
-           return "error";
+           return e;
        }
     }
 }
