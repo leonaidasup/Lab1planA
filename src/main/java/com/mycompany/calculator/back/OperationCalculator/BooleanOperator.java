@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.calculator.back.OperationCalculator;
-import com.mycompany.calculator.back.ElementalEspecialFunctions.ElementalFuncionts.BooleanFunctions;
+import com.mycompany.calculator.back.ElementalFunctions.BooleanFunctions;
 import com.mycompany.calculator.back.Interpreter.Exceptions.TypeError;
 
 /**
