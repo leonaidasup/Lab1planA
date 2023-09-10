@@ -9,5 +9,15 @@ package com.mycompany.calculator.back.OperationCalculator;
  * @author leona
  */
 public class ByteOperator {
-    
+    private byte var1;
+    private byte var2;
+    private String operator;
+    public ByteOperator(byte var1, byte var2, String operator) {
+        this.var1 = var1;
+        this.var2 = var2;
+        this.operator = operator;
+    }
+    public byte result() {
+        return 0;
+    }
 }
