@@ -6,7 +6,7 @@ package com.mycompany.calculator.back.Interpreter;
 import com.mycompany.calculator.back.Interpreter.ElementalInterpreters.*;
 /**
  *
- * @author Leonardo.amaris
+ * @author Leonardo_Amaris
  *  Interpreta la decisiones tomadas por el usuario ademas de verificar que variables
  *  y su operacion de tipo presente el mismo tipo de variable.
  */

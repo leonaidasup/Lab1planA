@@ -6,18 +6,11 @@ package com.mycompany.calculator.back.OperationCalculator;
 
 /**
  *
- * @author leona
+ * @author Leonardo_Amaris
  */
 public class BooleanOperator {
-    private boolean var1;
-    private boolean var2;
-    private String operator;
-    public BooleanOperator(boolean var1, boolean var2, String operator) {
-        this.var1 = var1;
-        this.var2 = var2;
-        this.operator = operator;
-    }
-    public boolean result() {
+    public BooleanOperator() {}
+    public boolean result(boolean var1, boolean var2, String operator) {
         return true;
     }
 }

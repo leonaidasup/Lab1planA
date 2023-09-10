@@ -7,7 +7,7 @@ import com.mycompany.calculator.back.OperationCalculator.ByteOperator;
 import com.mycompany.calculator.back.Interpreter.Exceptions.BooleanByteException;
 /**
  *
- * @author leona
+ * @author Leonardo_Amaris
  */
 public class ByteInterpreter {
     public ByteInterpreter() {}

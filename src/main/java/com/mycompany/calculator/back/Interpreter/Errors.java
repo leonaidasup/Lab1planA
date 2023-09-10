@@ -6,7 +6,7 @@ package com.mycompany.calculator.back.Interpreter;
 
 /**
  *
- * @author Leonardo.amaris
+ * @author Leonardo_Amaris
  *  Esta clase recibe los errores generador por el usuario al hacer operaciones
  *  no permitidas.
  */ 

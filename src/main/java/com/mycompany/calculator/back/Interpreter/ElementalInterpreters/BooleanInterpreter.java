@@ -7,7 +7,7 @@ import com.mycompany.calculator.back.OperationCalculator.BooleanOperator;
 import com.mycompany.calculator.back.Interpreter.Exceptions.BooleanByteException;
 /**
  *
- * @author leona
+ * @author Leonardo_Amaris
  */
 public class BooleanInterpreter {
     public BooleanInterpreter() {}
@@ -19,7 +19,7 @@ public class BooleanInterpreter {
     }
     public Object outPut(String var1, String var2, String operator){
        try {
-           return new BooleanOperator(convertBoolean(var1), convertBoolean(var2), operator).result();
+           return new BooleanOperator().result(convertBoolean(var1), convertBoolean(var2), operator);
        } catch (BooleanByteException e){
            return "error";
        }

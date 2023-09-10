@@ -6,7 +6,7 @@ package com.mycompany.calculator.back.Interpreter.ElementalInterpreters;
 import com.mycompany.calculator.back.OperationCalculator.ArithmeticOperator;
 /**
  *
- * @author leona
+ * @author Leonardo_Amaris
  */
 public class ArithmeticInterpreter {
     public ArithmeticInterpreter() {}

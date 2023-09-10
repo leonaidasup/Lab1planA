@@ -6,7 +6,7 @@ package com.mycompany.calculator.back.OperationCalculator;
 
 /**
  *
- * @author Leonardo.amaris
+ * @author Leonardo_Amaris
  *  resuelve las operaciones dadas por el interpretador.
  */
 public class ArithmeticOperator {

@@ -6,7 +6,7 @@ package com.mycompany.calculator.back.OperationCalculator;
 
 /**
  *
- * @author leona
+ * @author Leonardo_Amaris
  */
 public class ByteOperator {
     private byte var1;

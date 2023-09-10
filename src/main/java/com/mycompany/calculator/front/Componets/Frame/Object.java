@@ -8,6 +8,6 @@ package com.mycompany.calculator.front.Componets.Frame;
  *
  * @author leona
  */
-public class ListFrame {
+public class Object {
     
 }

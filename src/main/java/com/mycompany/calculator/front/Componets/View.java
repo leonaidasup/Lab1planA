@@ -6,7 +6,7 @@ package com.mycompany.calculator.front.Componets;
 
 /**
  *
- * @author Leonardo Amaris
+ * @author ....
  * 
  */
 public class View {

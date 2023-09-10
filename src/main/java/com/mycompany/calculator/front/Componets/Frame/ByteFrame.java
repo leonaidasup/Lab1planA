@@ -6,7 +6,7 @@ package com.mycompany.calculator.front.Componets.Frame;
 
 /**
  *
- * @author leona
+ * @author .....
  */
 public class ByteFrame {
     

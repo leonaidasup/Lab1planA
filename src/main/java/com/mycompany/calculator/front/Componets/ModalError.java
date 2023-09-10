@@ -6,7 +6,7 @@ package com.mycompany.calculator.front.Componets;
 
 /**
  *
- * @author Leonardo.amaris
+ * @author ....
  * Pantalla de error.
  */
 public class ModalError {

@@ -6,7 +6,7 @@ package com.mycompany.calculator.back.Interpreter.Exceptions;
 
 /**
  *
- * @author leona
+ * @author Leonardo_Amaris
  */
 public class BooleanByteException extends Exception {
     public BooleanByteException(String mensaje) {
