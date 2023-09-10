@@ -76,9 +76,7 @@ public class ElementalFunctions {
     }
     public double unitSubtraction(double a){ //-J
         return -a;
-    }
-    
-    
+    }  
     // Byte operations
     public double byteChange(double a){
         return 0;
@@ -101,8 +99,6 @@ public class ElementalFunctions {
     public double byteChangeOR(byte a, byte b){
         return 0;
     };
-    
-    
     // Boolean operations
     public boolean negation(boolean a){
         return !a;
@@ -122,13 +118,10 @@ public class ElementalFunctions {
     public boolean exclusiveAddition(boolean a, boolean b){ //-J
         return a^b;
     }
-    
     public Object conditionalOperation(boolean condicion, Object valorVerdadero, Object valorFalso){ //-J
         return condicion?valorVerdadero:valorFalso;
     //la funcion es de tipo objeto para permitir el manejo de varios tipos de dato como resultado 
     };
-    
-    
     // Cadena operations
     public int concatenation(int a, int b){
         return 0;
@@ -148,7 +141,7 @@ public class ElementalFunctions {
     public byte concatenation(byte[] a, byte[] b){
         return 0;
     };
-    public char concatenation(char[] a, char[] b){
+    public char concatenation(char a, char b){
         return '0';
     };
     // Objets operations
@@ -195,8 +188,6 @@ public class ElementalFunctions {
     public boolean different(char a, char b){
         return a != b;
     };
-    // Especial functions
-    
     //Integral operations - J
     public int BitChange(int a){
         return ~a;
@@ -210,7 +201,5 @@ public class ElementalFunctions {
     public int scrollingBitRightWithCero(int num, int cantidadBits){
         return num >> cantidadBits;
     }
-    
-    
 }
 

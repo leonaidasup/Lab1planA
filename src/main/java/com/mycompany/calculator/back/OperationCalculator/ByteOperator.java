@@ -6,9 +6,8 @@ package com.mycompany.calculator.back.OperationCalculator;
 
 /**
  *
- * @author Leonardo.amaris
- *  resuelve las operaciones dadas por el interpretador.
+ * @author leona
  */
-public class OperationCalculator {
+public class ByteOperator {
     
 }
