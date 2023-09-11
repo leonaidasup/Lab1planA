@@ -3,11 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.calculator.front.Componets;
-
-import com.mycompany.calculator.back.ElementalFunctions.ObjectFuntioncs;
-import com.mycompany.calculator.back.ElementalFunctions.ArithmeticFunctions;
+import com.mycompany.calculator.back.OperationCalculator.TernaryOperator;
 import com.mycompany.calculator.back.Exceptions.TypeError;
-
 /**
  *
  * @author Jhomar_Arrieta
@@ -61,6 +58,11 @@ public class TernarioPanel extends javax.swing.JPanel {
         dato1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         dato2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        dato2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dato2ActionPerformed(evt);
+            }
+        });
 
         condicion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         condicion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { ">", "<", "≥", "≤", "=" }));
@@ -96,18 +98,19 @@ public class TernarioPanel extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
-                                .addComponent(respuestaTrue))
+                                .addComponent(respuestaTrue)
+                                .addGap(23, 23, 23))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(dato1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                                        .addComponent(dato1, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                                        .addGap(18, 18, 18)
                                         .addComponent(condicion, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
-                                    .addComponent(dato2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(dato2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(65, 65, 65))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,81 +158,24 @@ public class TernarioPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void operarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_operarButtonActionPerformed
-        String var1 = dato1.getText();
-        String var2 = dato2.getText();
         String rTrue = respuestaTrue.getText();
         String rFalse = respuestaFalse.getText();
         boolean resultado = false;
-        String comparacion = condicion.getSelectedItem().toString();
         
         
-        switch (comparacion) {
-            case "=":
-                resultado = ObjectFuntioncs.equal(var1, var2);
-                if (resultado==true){
-                        labelResultado.setText(rTrue);
-                    }else{
-                        labelResultado.setText(rFalse);
-                    }
-                break;
-            case ">":
-                try {
-                    double num1 = Double.parseDouble(var1);
-                    double num2 = Double.parseDouble(var2);
-                    resultado = ArithmeticFunctions.greaterTo(num1, num2);
-                    if (resultado==true){
-                        labelResultado.setText(rTrue);
-                    }else{
-                        labelResultado.setText(rFalse);
-                    }
-                } catch (NumberFormatException e) {
-                    labelResultado.setText("esa condicion solo es valida con datos numericos");
-                }   break;
-            case "<":
-                try {
-                    double num1 = Double.parseDouble(var1);
-                    double num2 = Double.parseDouble(var2);
-                    resultado = ArithmeticFunctions.minusTo(num1, num2);
-                    if (resultado==true){
-                        labelResultado.setText(rTrue);
-                    }else{
-                        labelResultado.setText(rFalse);
-                    }
-                } catch (NumberFormatException e) {
-                    labelResultado.setText("esa condicion solo es valida con datos numericos");
-                }   break;
-            case "≥":
-                try {
-                    double num1 = Double.parseDouble(var1);
-                    double num2 = Double.parseDouble(var2);
-                    resultado = ArithmeticFunctions.greaterEqualTo(num1, num2);
-                    if (resultado==true){
-                        labelResultado.setText(rTrue);
-                    }else{
-                        labelResultado.setText(rFalse);
-                    }
-                } catch (NumberFormatException e) {
-                    labelResultado.setText("esa condicion solo es valida con datos numericos");
-                }   break;
-            case "≤":
-                try {
-                    double num1 = Double.parseDouble(var1);
-                    double num2 = Double.parseDouble(var2);
-                    resultado = ArithmeticFunctions.minusEqualTo(num1, num2);
-                    if (resultado==true){
-                        labelResultado.setText(rTrue);
-                    }else{
-                        labelResultado.setText(rFalse);
-                    }
-                } catch (NumberFormatException e) {
-                    labelResultado.setText("esa condicion solo es valida con datos numericos");
-                }   break;
-            default:
+        try {
+            labelResultado.setText("" + TernaryOperator.outPut(dato1.getText(), dato2.getText(), condicion.getSelectedItem().toString()));
+        } catch (TypeError e) {
+            System.out.println(e.getMessage());
         }
         
         
         
     }//GEN-LAST:event_operarButtonActionPerformed
+
+    private void dato2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dato2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dato2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

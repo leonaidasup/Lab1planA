@@ -79,7 +79,7 @@ public class Object2Panel extends javax.swing.JPanel {
         resultadoConcatenar.setText(".");
 
         criterio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        criterio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "iguales?", "diferentes?" }));
+        criterio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "=", "!=" }));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Criterio de comparación");
@@ -95,40 +95,43 @@ public class Object2Panel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(12, 12, 12)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel1)
-                                .addComponent(dato1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(92, 92, 92)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(dato2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(concatenarButton)
-                                .addGap(207, 207, 207))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(CompararButton)
-                                .addGap(39, 39, 39)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(criterio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(29, 29, 29))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
+                        .addGap(102, 102, 102)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel7)
                             .addComponent(jLabel6))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(resultadoComparar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(resultadoConcatenar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 140, Short.MAX_VALUE))
-                            .addComponent(resultadoComparar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(57, 57, 57)
+                                .addComponent(concatenarButton))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(56, 56, 56)
+                                .addComponent(CompararButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(166, 166, 166)
+                                .addComponent(jLabel5))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(204, 204, 204)
+                                .addComponent(criterio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(dato1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(dato2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -163,30 +166,14 @@ public class Object2Panel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void concatenarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_concatenarButtonActionPerformed
-        String var1 = dato1.getText();
-        String var2 = dato2.getText();
-        
-        String resultado = ObjectFuntioncs.concatenation(var1, var2);
-        
-        resultadoConcatenar.setText(resultado);
-        
+        resultadoConcatenar.setText(ObjectFuntioncs.concatenation(dato1.getText(), dato2.getText()));     
     }//GEN-LAST:event_concatenarButtonActionPerformed
 
     private void CompararButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompararButtonActionPerformed
         String var1 = dato1.getText();
         String var2 = dato2.getText();
-        String comparacion = criterio.getSelectedItem().toString();
-        boolean resultado;
-        
-        if (comparacion.equals("iguales?")){
-            resultado = ObjectFuntioncs.equal(var1, var2);
-        }
-        else{
-            resultado = ObjectFuntioncs.different(var1, var2);
-        }
-        
+        boolean resultado = criterio.getSelectedItem().toString().equals("=")? ObjectFuntioncs.equal(var1, var2) : ObjectFuntioncs.different(var1, var2);        
         resultadoComparar.setText("" + resultado);
-        
     }//GEN-LAST:event_CompararButtonActionPerformed
 
 
