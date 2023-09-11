@@ -44,7 +44,7 @@ public class ArithmeticFunctions {
     public static boolean greaterEqualTo(double a, double b){
         return a >= b;
     };
-    public static boolean greaterTo (double a, double b){
+    public static boolean greaterTo(double a, double b){
         return a > b;
     };
     public static double backwardUnitIncrement(double a){
