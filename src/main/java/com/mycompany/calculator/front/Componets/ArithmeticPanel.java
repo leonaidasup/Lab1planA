@@ -9,7 +9,7 @@ import com.mycompany.calculator.back.Exceptions.TypeError;
 import javax.swing.JOptionPane;
 /**
  *
- * @author ASUS
+ * @author Jhomar_Arrieta
  */
 public class ArithmeticPanel extends javax.swing.JPanel {
     /**

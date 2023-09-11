@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ASUS
+ * @author Jhomar_Arrieta
  */
 public class BytePanel extends javax.swing.JPanel {
 
@@ -217,7 +217,7 @@ public class BytePanel extends javax.swing.JPanel {
             resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "<<"));
             
         } catch (TypeError e) {
-            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_desplazarIzqButtonActionPerformed
 
@@ -229,7 +229,7 @@ public class BytePanel extends javax.swing.JPanel {
             resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "&"));
             
         } catch (TypeError e) {
-            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_cambiarBitsAndButtonActionPerformed
 
@@ -241,7 +241,7 @@ public class BytePanel extends javax.swing.JPanel {
             resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, ">>"));
             
         } catch (TypeError e) {
-            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_desplazarDerSignoButtonActionPerformed
 
@@ -253,7 +253,7 @@ public class BytePanel extends javax.swing.JPanel {
             resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "|"));
             
         } catch (TypeError e) {
-            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_cambiarBitsOrButtonActionPerformed
 
@@ -265,7 +265,7 @@ public class BytePanel extends javax.swing.JPanel {
             resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, ">>>"));
             
         } catch (TypeError e) {
-            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_desplazarDerCeroButtonActionPerformed
 
@@ -277,7 +277,7 @@ public class BytePanel extends javax.swing.JPanel {
             resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "^"));
             
         } catch (TypeError e) {
-            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_cambiarBitsOrxButtonActionPerformed
 

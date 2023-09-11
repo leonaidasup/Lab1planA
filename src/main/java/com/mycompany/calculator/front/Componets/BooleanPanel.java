@@ -210,7 +210,7 @@ public class BooleanPanel extends javax.swing.JPanel {
             resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "&"));
             
         } catch (TypeError ex) {
-            JOptionPane.showMessageDialog(null, "datos no validos");
+            JOptionPane.showMessageDialog(null, ex.getMessage() );
         }
     }//GEN-LAST:event_andButtonActionPerformed
 
@@ -222,7 +222,7 @@ public class BooleanPanel extends javax.swing.JPanel {
             resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "|"));
             
         } catch (TypeError ex) {
-            System.out.println("Error de tipo");
+            JOptionPane.showMessageDialog(null, ex.getMessage() );
         }
     }//GEN-LAST:event_orButtonActionPerformed
 
@@ -234,7 +234,7 @@ public class BooleanPanel extends javax.swing.JPanel {
             resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "&&"));
             
         } catch (TypeError ex) {
-            System.out.println("Error de tipo");
+            JOptionPane.showMessageDialog(null, ex.getMessage() );
         }
     }//GEN-LAST:event_productoButtonActionPerformed
 
@@ -246,7 +246,7 @@ public class BooleanPanel extends javax.swing.JPanel {
             resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "||"));
             
         } catch (TypeError ex) {
-            System.out.println("Error de tipo");
+            JOptionPane.showMessageDialog(null, ex.getMessage() );
         }
     }//GEN-LAST:event_sumaButtonActionPerformed
 
@@ -258,7 +258,7 @@ public class BooleanPanel extends javax.swing.JPanel {
             resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "^"));
             
         } catch (TypeError ex) {
-            System.out.println("Error de tipo");
+            JOptionPane.showMessageDialog(null, ex.getMessage() );
         }
     }//GEN-LAST:event_sumaExButtonActionPerformed
 

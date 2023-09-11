@@ -8,7 +8,7 @@ import java.awt.BorderLayout;
 
 /**
  *
- * @author ASUS
+ * @author Jhomar_Arrieta
  */
 public class ObjectPanel extends javax.swing.JPanel {
 
