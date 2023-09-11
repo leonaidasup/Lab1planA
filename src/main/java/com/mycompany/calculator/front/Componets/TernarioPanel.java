@@ -6,7 +6,7 @@ package com.mycompany.calculator.front.Componets;
 
 import com.mycompany.calculator.back.ElementalFunctions.ObjectFuntioncs;
 import com.mycompany.calculator.back.ElementalFunctions.ArithmeticFunctions;
-import com.mycompany.calculator.back.Interpreter.Exceptions.TypeError;
+import com.mycompany.calculator.back.Exceptions.TypeError;
 
 /**
  *

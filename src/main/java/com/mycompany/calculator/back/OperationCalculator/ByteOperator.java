@@ -4,7 +4,7 @@
  */
 package com.mycompany.calculator.back.OperationCalculator;
 import com.mycompany.calculator.back.ElementalFunctions.ByteFunctions;
-import com.mycompany.calculator.back.Interpreter.Exceptions.TypeError;
+import com.mycompany.calculator.back.Exceptions.TypeError;
 
 /**
  *
@@ -47,14 +47,14 @@ public class ByteOperator {
         try {
             return Integer.parseInt(var);
         } catch (NumberFormatException e) {
-            throw new TypeError("La variable " + var + " no es de tipo Byte.");
+            throw new TypeError("La entrada " + var + " no es de tipo Byte.");
         }
     }
-    public static Object outPut(String var1, String var2, String operator){
+    public static Object outPut(String var1, String var2, String operator) throws TypeError{
         try {
             return result(convertByte(var1), convertByte(var2), operator);
         } catch (TypeError e){
-            return e;
+            throw e;
         }
     }
 }

@@ -3,17 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.calculator.front.Componets;
-
-import com.mycompany.calculator.back.Interpreter.Interpreter;
 import com.mycompany.calculator.back.OperationCalculator.ArithmeticOperator;
-import com.mycompany.calculator.back.ElementalFunctions.ArithmeticFunctions;
-
+import com.mycompany.calculator.back.Exceptions.DivsionZeroError;
+import com.mycompany.calculator.back.Exceptions.TypeError;
 /**
  *
  * @author ASUS
  */
 public class ArithmeticPanel extends javax.swing.JPanel {
-
     /**
      * Creates new form arithmeticPanel
      */
@@ -67,7 +64,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
 
         additionButton.setBackground(new java.awt.Color(142, 205, 221));
         additionButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        additionButton.setText("suma");
+        additionButton.setText("+");
         additionButton.setPreferredSize(new java.awt.Dimension(105, 23));
         additionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +74,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
 
         subtractionButton.setBackground(new java.awt.Color(142, 205, 221));
         subtractionButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        subtractionButton.setText("resta");
+        subtractionButton.setText("-");
         subtractionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 subtractionButtonActionPerformed(evt);
@@ -86,7 +83,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
 
         multiplicationButton.setBackground(new java.awt.Color(142, 205, 221));
         multiplicationButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        multiplicationButton.setText("multiplicación");
+        multiplicationButton.setText("*");
         multiplicationButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 multiplicationButtonActionPerformed(evt);
@@ -95,7 +92,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
 
         divisionButton.setBackground(new java.awt.Color(142, 205, 221));
         divisionButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        divisionButton.setText("división");
+        divisionButton.setText("/");
         divisionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 divisionButtonActionPerformed(evt);
@@ -104,7 +101,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
 
         RestButton.setBackground(new java.awt.Color(142, 205, 221));
         RestButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        RestButton.setText("modulo");
+        RestButton.setText("mod");
         RestButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RestButtonActionPerformed(evt);
@@ -179,22 +176,6 @@ public class ArithmeticPanel extends javax.swing.JPanel {
                 .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(additionButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(subtractionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(GreaterThanSingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(lessThanSignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(increaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(multiplicationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(divisionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(RestButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(variableA1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -203,14 +184,34 @@ public class ArithmeticPanel extends javax.swing.JPanel {
                             .addComponent(variableA2)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(GreaterThanOrEqualSingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10)
-                        .addComponent(lessThanOrEqualSignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(decreaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(121, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(GreaterThanOrEqualSingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                                .addComponent(lessThanOrEqualSignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(additionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                                    .addComponent(multiplicationButton, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                                    .addComponent(GreaterThanSingButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lessThanSignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(subtractionButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(divisionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(decreaseButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(increaseButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(RestButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(119, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(resultadoA, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -228,24 +229,27 @@ public class ArithmeticPanel extends javax.swing.JPanel {
                     .addComponent(variableA1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(variableA2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(additionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(subtractionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(multiplicationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(divisionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RestButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(divisionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(RestButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(GreaterThanSingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lessThanSignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(increaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lessThanSignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(increaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(9, 9, 9)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(GreaterThanOrEqualSingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lessThanOrEqualSignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(decreaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lessThanOrEqualSignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(decreaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(resultadoA, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -259,109 +263,91 @@ public class ArithmeticPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_variableA1ActionPerformed
 
     private void GreaterThanOrEqualSingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GreaterThanOrEqualSingButtonActionPerformed
-        String valor1 = variableA1.getText();
-        String valor2 = variableA2.getText();
-        double var1 = Double.parseDouble(valor1);
-        double var2 = Double.parseDouble(valor2);
-        boolean resultado = ArithmeticFunctions.greaterEqualTo(var1, var2);
-        
-        resultadoA.setText("" + resultado);
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), ">="));
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }  
     }//GEN-LAST:event_GreaterThanOrEqualSingButtonActionPerformed
 
     private void lessThanOrEqualSignButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessThanOrEqualSignButtonActionPerformed
-        String valor1 = variableA1.getText();
-        String valor2 = variableA2.getText();
-        double var1 = Double.parseDouble(valor1);
-        double var2 = Double.parseDouble(valor2);
-        boolean resultado = ArithmeticFunctions.minusEqualTo(var1, var2);
-        
-        resultadoA.setText("" + resultado);
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "<="));
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_lessThanOrEqualSignButtonActionPerformed
 
     private void decreaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decreaseButtonActionPerformed
-        String valor1 = variableA1.getText();
-        double var1 = Double.parseDouble(valor1);
-        double resultado = ArithmeticFunctions.forwardUnitIncrement(var1);
-        
-        resultadoA.setText(""+resultado);
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "--"));
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }    
     }//GEN-LAST:event_decreaseButtonActionPerformed
 
     private void additionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_additionButtonActionPerformed
-        String valor1 = variableA1.getText();
-        String valor2 = variableA2.getText();
-        
-        double resultadoNumerico = (double) ArithmeticOperator.outPut(valor1, valor2, "+");
-        String resultado = Double.toString(resultadoNumerico);
-        
-        resultadoA.setText(resultado);        
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "+"));
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_additionButtonActionPerformed
 
     private void subtractionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractionButtonActionPerformed
-        String valor1 = variableA1.getText();
-        String valor2 = variableA2.getText();
-        
-        double resultadoNumerico = (double) ArithmeticOperator.outPut(valor1, valor2, "-");
-        String resultado = Double.toString(resultadoNumerico);
-        
-        resultadoA.setText(resultado);     
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "-"));  
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_subtractionButtonActionPerformed
 
     private void multiplicationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicationButtonActionPerformed
-        String valor1 = variableA1.getText();
-        String valor2 = variableA2.getText();
-        
-        double resultadoNumerico = (double) ArithmeticOperator.outPut(valor1, valor2, "*");
-        String resultado = Double.toString(resultadoNumerico);
-        
-        resultadoA.setText(resultado);     
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "*"));   
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }  
     }//GEN-LAST:event_multiplicationButtonActionPerformed
 
     private void divisionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionButtonActionPerformed
-        String valor1 = variableA1.getText();
-        String valor2 = variableA2.getText();
-        
-        double resultadoNumerico = (double) ArithmeticOperator.outPut(valor1, valor2, "/");
-        String resultado = Double.toString(resultadoNumerico);
-        
-        resultadoA.setText(resultado);     
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "/"));   
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_divisionButtonActionPerformed
 
     private void RestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestButtonActionPerformed
-        String valor1 = variableA1.getText();
-        String valor2 = variableA2.getText();
-        
-        double resultadoNumerico = (double) ArithmeticOperator.outPut(valor1, valor2, "%");
-        String resultado = Double.toString(resultadoNumerico);
-        
-        resultadoA.setText(resultado);     
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "%"));   
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }      
     }//GEN-LAST:event_RestButtonActionPerformed
 
     private void GreaterThanSingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GreaterThanSingButtonActionPerformed
-        String valor1 = variableA1.getText();
-        String valor2 = variableA2.getText();
-        double var1 = Double.parseDouble(valor1);
-        double var2 = Double.parseDouble(valor2);
-        boolean resultado = ArithmeticFunctions.greaterTo(var1, var2);
-        
-        resultadoA.setText("" + resultado);
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), ">"));
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_GreaterThanSingButtonActionPerformed
 
     private void lessThanSignButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessThanSignButtonActionPerformed
-        String valor1 = variableA1.getText();
-        String valor2 = variableA2.getText();
-        double var1 = Double.parseDouble(valor1);
-        double var2 = Double.parseDouble(valor2);
-        boolean resultado = ArithmeticFunctions.minusTo(var1, var2);
-        
-        resultadoA.setText("" + resultado);
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "<"));
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }    
     }//GEN-LAST:event_lessThanSignButtonActionPerformed
 
     private void increaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_increaseButtonActionPerformed
-        String valor1 = variableA1.getText();
-        double var1 = Double.parseDouble(valor1);
-        double resultado = ArithmeticFunctions.backwardUnitIncrement(var1);
-        
-        resultadoA.setText(""+resultado);
+        try {
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "++"));
+        } catch (TypeError | DivsionZeroError e) {
+            System.out.println(e.getMessage());
+        }
     }//GEN-LAST:event_increaseButtonActionPerformed
 
 

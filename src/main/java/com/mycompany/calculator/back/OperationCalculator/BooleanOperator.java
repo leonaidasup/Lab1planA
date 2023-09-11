@@ -4,7 +4,7 @@
  */
 package com.mycompany.calculator.back.OperationCalculator;
 import com.mycompany.calculator.back.ElementalFunctions.BooleanFunctions;
-import com.mycompany.calculator.back.Interpreter.Exceptions.TypeError;
+import com.mycompany.calculator.back.Exceptions.TypeError;
 
 /**
  *
@@ -42,15 +42,15 @@ public class BooleanOperator {
     }
     public static boolean convertBoolean(String var) throws TypeError{
         if (!"true".equals(var) || !"false".equals(var)) {
-            throw new TypeError("La variable " + var + " no es de tipo Booleana.");
+            throw new TypeError("La entrada " + var + " no es de tipo Booleana.");
         }
         return Boolean.parseBoolean(var);
     }
-    public static Object outPut(String var1, String var2, String operator){
+    public static Object outPut(String var1, String var2, String operator) throws TypeError{
        try {
            return result(convertBoolean(var1), convertBoolean(var2), operator);
        } catch (TypeError e){
-           return e;
+           throw e;
        }
     }
 }
