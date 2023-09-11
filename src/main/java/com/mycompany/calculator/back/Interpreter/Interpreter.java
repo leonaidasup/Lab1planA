@@ -35,6 +35,16 @@ public class Interpreter {
     public void setOperatorTipe(Object operatorTipe) {
         this.operatorType = operatorTipe;
     }
+
+    public String getVar1() {
+        return var1;
+    }
+
+    public String getVar2() {
+        return var2;
+    }
+    
+    
     public Object outPut(){
        if (this.operatorType instanceof Double) {
            return ArithmeticOperator.outPut(var1, var2, operator);

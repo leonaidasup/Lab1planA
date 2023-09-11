@@ -4,6 +4,10 @@
  */
 package com.mycompany.calculator.front.Componets;
 
+import com.mycompany.calculator.back.Interpreter.Interpreter;
+import com.mycompany.calculator.back.OperationCalculator.ArithmeticOperator;
+import com.mycompany.calculator.back.ElementalFunctions.ArithmeticFunctions;
+
 /**
  *
  * @author ASUS
@@ -57,20 +61,60 @@ public class ArithmeticPanel extends javax.swing.JPanel {
 
         additionButton.setText("suma");
         additionButton.setPreferredSize(new java.awt.Dimension(105, 23));
+        additionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                additionButtonActionPerformed(evt);
+            }
+        });
 
         subtractionButton.setText("resta");
+        subtractionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subtractionButtonActionPerformed(evt);
+            }
+        });
 
         multiplicationButton.setText("multiplicación");
+        multiplicationButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicationButtonActionPerformed(evt);
+            }
+        });
 
         divisionButton.setText("división");
+        divisionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divisionButtonActionPerformed(evt);
+            }
+        });
 
         RestButton.setText("modulo");
+        RestButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RestButtonActionPerformed(evt);
+            }
+        });
 
         GreaterThanSingButton.setText(">");
+        GreaterThanSingButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GreaterThanSingButtonActionPerformed(evt);
+            }
+        });
 
         lessThanSignButton.setText("<");
+        lessThanSignButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lessThanSignButtonActionPerformed(evt);
+            }
+        });
 
         increaseButton.setText("+1");
+        increaseButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                increaseButtonActionPerformed(evt);
+            }
+        });
 
         GreaterThanOrEqualSingButton.setText("≥");
         GreaterThanOrEqualSingButton.addActionListener(new java.awt.event.ActionListener() {
@@ -179,16 +223,110 @@ public class ArithmeticPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_variableA1ActionPerformed
 
     private void GreaterThanOrEqualSingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GreaterThanOrEqualSingButtonActionPerformed
-        // TODO add your handling code here:
+        String valor1 = variableA1.getText();
+        String valor2 = variableA2.getText();
+        double var1 = Double.parseDouble(valor1);
+        double var2 = Double.parseDouble(valor2);
+        boolean resultado = ArithmeticFunctions.greaterEqualTo(var1, var2);
+        
+        resultadoA.setText("" + resultado);
     }//GEN-LAST:event_GreaterThanOrEqualSingButtonActionPerformed
 
     private void lessThanOrEqualSignButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessThanOrEqualSignButtonActionPerformed
-        // TODO add your handling code here:
+        String valor1 = variableA1.getText();
+        String valor2 = variableA2.getText();
+        double var1 = Double.parseDouble(valor1);
+        double var2 = Double.parseDouble(valor2);
+        boolean resultado = ArithmeticFunctions.minusEqualTo(var1, var2);
+        
+        resultadoA.setText("" + resultado);
     }//GEN-LAST:event_lessThanOrEqualSignButtonActionPerformed
 
     private void decreaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decreaseButtonActionPerformed
-        // TODO add your handling code here:
+        String valor1 = variableA1.getText();
+        double var1 = Double.parseDouble(valor1);
+        double resultado = ArithmeticFunctions.forwardUnitIncrement(var1);
+        
+        resultadoA.setText(""+resultado);
     }//GEN-LAST:event_decreaseButtonActionPerformed
+
+    private void additionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_additionButtonActionPerformed
+        String valor1 = variableA1.getText();
+        String valor2 = variableA2.getText();
+        
+        double resultadoNumerico = (double) ArithmeticOperator.outPut(valor1, valor2, "+");
+        String resultado = Double.toString(resultadoNumerico);
+        
+        resultadoA.setText(resultado);        
+    }//GEN-LAST:event_additionButtonActionPerformed
+
+    private void subtractionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractionButtonActionPerformed
+        String valor1 = variableA1.getText();
+        String valor2 = variableA2.getText();
+        
+        double resultadoNumerico = (double) ArithmeticOperator.outPut(valor1, valor2, "-");
+        String resultado = Double.toString(resultadoNumerico);
+        
+        resultadoA.setText(resultado);     
+    }//GEN-LAST:event_subtractionButtonActionPerformed
+
+    private void multiplicationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicationButtonActionPerformed
+        String valor1 = variableA1.getText();
+        String valor2 = variableA2.getText();
+        
+        double resultadoNumerico = (double) ArithmeticOperator.outPut(valor1, valor2, "*");
+        String resultado = Double.toString(resultadoNumerico);
+        
+        resultadoA.setText(resultado);     
+    }//GEN-LAST:event_multiplicationButtonActionPerformed
+
+    private void divisionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionButtonActionPerformed
+        String valor1 = variableA1.getText();
+        String valor2 = variableA2.getText();
+        
+        double resultadoNumerico = (double) ArithmeticOperator.outPut(valor1, valor2, "/");
+        String resultado = Double.toString(resultadoNumerico);
+        
+        resultadoA.setText(resultado);     
+    }//GEN-LAST:event_divisionButtonActionPerformed
+
+    private void RestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestButtonActionPerformed
+        String valor1 = variableA1.getText();
+        String valor2 = variableA2.getText();
+        
+        double resultadoNumerico = (double) ArithmeticOperator.outPut(valor1, valor2, "%");
+        String resultado = Double.toString(resultadoNumerico);
+        
+        resultadoA.setText(resultado);     
+    }//GEN-LAST:event_RestButtonActionPerformed
+
+    private void GreaterThanSingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GreaterThanSingButtonActionPerformed
+        String valor1 = variableA1.getText();
+        String valor2 = variableA2.getText();
+        double var1 = Double.parseDouble(valor1);
+        double var2 = Double.parseDouble(valor2);
+        boolean resultado = ArithmeticFunctions.greaterTo(var1, var2);
+        
+        resultadoA.setText("" + resultado);
+    }//GEN-LAST:event_GreaterThanSingButtonActionPerformed
+
+    private void lessThanSignButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lessThanSignButtonActionPerformed
+        String valor1 = variableA1.getText();
+        String valor2 = variableA2.getText();
+        double var1 = Double.parseDouble(valor1);
+        double var2 = Double.parseDouble(valor2);
+        boolean resultado = ArithmeticFunctions.minusTo(var1, var2);
+        
+        resultadoA.setText("" + resultado);
+    }//GEN-LAST:event_lessThanSignButtonActionPerformed
+
+    private void increaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_increaseButtonActionPerformed
+        String valor1 = variableA1.getText();
+        double var1 = Double.parseDouble(valor1);
+        double resultado = ArithmeticFunctions.backwardUnitIncrement(var1);
+        
+        resultadoA.setText(""+resultado);
+    }//GEN-LAST:event_increaseButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
