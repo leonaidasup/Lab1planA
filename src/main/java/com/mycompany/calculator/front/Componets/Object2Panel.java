@@ -4,9 +4,12 @@
  */
 package com.mycompany.calculator.front.Componets;
 
+import com.mycompany.calculator.back.ElementalFunctions.ObjectFuntioncs;
+
 /**
  *
- * @author ASUS
+ * @author Jhomar_Arrieta
+ * 
  */
 public class Object2Panel extends javax.swing.JPanel {
 
@@ -54,6 +57,11 @@ public class Object2Panel extends javax.swing.JPanel {
         concatenarButton.setBackground(new java.awt.Color(142, 205, 221));
         concatenarButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         concatenarButton.setText("Concatenar");
+        concatenarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                concatenarButtonActionPerformed(evt);
+            }
+        });
 
         resultadoComparar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         resultadoComparar.setText(".");
@@ -61,6 +69,11 @@ public class Object2Panel extends javax.swing.JPanel {
         CompararButton.setBackground(new java.awt.Color(142, 205, 221));
         CompararButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         CompararButton.setText("Comparar");
+        CompararButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CompararButtonActionPerformed(evt);
+            }
+        });
 
         resultadoConcatenar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         resultadoConcatenar.setText(".");
@@ -112,9 +125,11 @@ public class Object2Panel extends javax.swing.JPanel {
                             .addComponent(jLabel6))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(resultadoConcatenar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(resultadoComparar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(96, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(resultadoConcatenar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 140, Short.MAX_VALUE))
+                            .addComponent(resultadoComparar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,6 +161,33 @@ public class Object2Panel extends javax.swing.JPanel {
                 .addContainerGap(41, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void concatenarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_concatenarButtonActionPerformed
+        String var1 = dato1.getText();
+        String var2 = dato2.getText();
+        
+        String resultado = ObjectFuntioncs.concatenation(var1, var2);
+        
+        resultadoConcatenar.setText(resultado);
+        
+    }//GEN-LAST:event_concatenarButtonActionPerformed
+
+    private void CompararButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompararButtonActionPerformed
+        String var1 = dato1.getText();
+        String var2 = dato2.getText();
+        String comparacion = criterio.getSelectedItem().toString();
+        boolean resultado;
+        
+        if (comparacion.equals("iguales?")){
+            resultado = ObjectFuntioncs.equal(var1, var2);
+        }
+        else{
+            resultado = ObjectFuntioncs.different(var1, var2);
+        }
+        
+        resultadoComparar.setText("" + resultado);
+        
+    }//GEN-LAST:event_CompararButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
