@@ -5,7 +5,8 @@
 package com.mycompany.calculator.back.ElementalFunctions;
 /**
  *
- * @author Leonardo_Amaris arrietajh
+ * @author Leonardo_Amaris Jhomar_Arrieta
+ * 
  * Contiene las funciones de objetos elementales de la calculadora.
  * Operadores de object:
  *  conditionalOperation
@@ -23,9 +24,9 @@ public class ObjectFuntioncs {
         return a + b;
     };
     public static boolean equal(Object a, Object b){
-        return a == b;
+        return a.equals(b);
     };
     public static boolean different(Object a, Object b){
-        return a != b;
+        return !(a.equals(b));
     };
 }

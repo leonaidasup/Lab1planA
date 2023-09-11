@@ -48,9 +48,11 @@ public class ArithmeticFunctions {
         return a > b;
     };
     public static double backwardUnitIncrement(double a){
-        return a ++;
+        a++;
+        return a;
     };
     public static double forwardUnitIncrement(double a){
-        return a --;
+        a--;
+        return a;
     };
 }
