@@ -116,6 +116,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cambiar bits"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cambiarBitsButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="desplazarIzqButton">
       <Properties>
@@ -127,6 +130,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Desplazar bit a la Izquierda"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="desplazarIzqButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="desplazarDerSignoButton">
       <Properties>
@@ -138,6 +144,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Desplazar bit a la Derecha con inclusion de signo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="desplazarDerSignoButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="desplazarDerCeroButton">
       <Properties>
@@ -149,6 +158,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Desplazar bit a la Derecha&#xa;con inclusi&#xf3;n de cero"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="desplazarDerCeroButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="cambiarBitsAndButton">
       <Properties>
@@ -160,6 +172,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cambiar bits AND"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cambiarBitsAndButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="cambiarBitsOrButton">
       <Properties>
@@ -171,6 +186,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cambiar bits OR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cambiarBitsOrButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="cambiarBitsOrxButton">
       <Properties>
@@ -182,6 +200,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cambiar bits ORX"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cambiarBitsOrxButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>

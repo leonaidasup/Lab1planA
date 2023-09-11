@@ -6,6 +6,7 @@ package com.mycompany.calculator.front.Componets;
 import com.mycompany.calculator.back.OperationCalculator.ArithmeticOperator;
 import com.mycompany.calculator.back.Exceptions.DivsionZeroError;
 import com.mycompany.calculator.back.Exceptions.TypeError;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ASUS
@@ -267,6 +268,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), ">="));
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }  
     }//GEN-LAST:event_GreaterThanOrEqualSingButtonActionPerformed
 
@@ -275,6 +277,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "<="));
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_lessThanOrEqualSignButtonActionPerformed
 
@@ -283,6 +286,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "--"));
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }    
     }//GEN-LAST:event_decreaseButtonActionPerformed
 
@@ -291,6 +295,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "+"));
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_additionButtonActionPerformed
 
@@ -299,6 +304,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "-"));  
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_subtractionButtonActionPerformed
 
@@ -307,6 +313,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "*"));   
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }  
     }//GEN-LAST:event_multiplicationButtonActionPerformed
 
@@ -315,6 +322,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "/"));   
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_divisionButtonActionPerformed
 
@@ -323,6 +331,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "%"));   
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }      
     }//GEN-LAST:event_RestButtonActionPerformed
 
@@ -331,6 +340,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), ">"));
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_GreaterThanSingButtonActionPerformed
 
@@ -339,6 +349,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "<"));
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }    
     }//GEN-LAST:event_lessThanSignButtonActionPerformed
 
@@ -347,6 +358,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "++"));
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_increaseButtonActionPerformed
 

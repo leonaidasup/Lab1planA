@@ -34,10 +34,10 @@ public class CalculatorView extends javax.swing.JFrame {
         menuPanel = new javax.swing.JPanel();
         arithmeticButton = new javax.swing.JButton();
         booleanButton = new javax.swing.JButton();
-        byteButton = new javax.swing.JButton();
         ObjectButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        byteButton1 = new javax.swing.JButton();
         contentPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -74,18 +74,6 @@ public class CalculatorView extends javax.swing.JFrame {
         });
         menuPanel.add(booleanButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 160, 40));
 
-        byteButton.setBackground(new java.awt.Color(34, 102, 141));
-        byteButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        byteButton.setForeground(new java.awt.Color(255, 255, 255));
-        byteButton.setText("de Bytes");
-        byteButton.setBorderPainted(false);
-        byteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                byteButtonActionPerformed(evt);
-            }
-        });
-        menuPanel.add(byteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 160, 40));
-
         ObjectButton.setBackground(new java.awt.Color(34, 102, 141));
         ObjectButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         ObjectButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -105,6 +93,18 @@ public class CalculatorView extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("CALCULADORA");
         menuPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+
+        byteButton1.setBackground(new java.awt.Color(34, 102, 141));
+        byteButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        byteButton1.setForeground(new java.awt.Color(255, 255, 255));
+        byteButton1.setText("de Bytes");
+        byteButton1.setBorderPainted(false);
+        byteButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                byteButton1ActionPerformed(evt);
+            }
+        });
+        menuPanel.add(byteButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 160, 40));
 
         jPanel1.add(menuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
 
@@ -170,16 +170,9 @@ public class CalculatorView extends javax.swing.JFrame {
         contentPanel.repaint();
     }//GEN-LAST:event_ObjectButtonActionPerformed
 
-    private void byteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_byteButtonActionPerformed
-        BytePanel byPanel = new BytePanel();
-        byPanel.setSize(510,410);
-        byPanel.setLocation(0,0);
+    private void byteButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_byteButton1ActionPerformed
         
-        contentPanel.removeAll();
-        contentPanel.add(byPanel, BorderLayout.CENTER);
-        contentPanel.revalidate();
-        contentPanel.repaint();
-    }//GEN-LAST:event_byteButtonActionPerformed
+    }//GEN-LAST:event_byteButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,7 +216,7 @@ public class CalculatorView extends javax.swing.JFrame {
     private javax.swing.JButton ObjectButton;
     private javax.swing.JButton arithmeticButton;
     private javax.swing.JButton booleanButton;
-    private javax.swing.JButton byteButton;
+    private javax.swing.JButton byteButton1;
     private javax.swing.JPanel contentPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

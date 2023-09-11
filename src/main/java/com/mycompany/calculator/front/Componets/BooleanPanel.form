@@ -134,6 +134,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Y"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="andButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="NegacionButton">
       <Properties>
@@ -159,6 +162,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="O"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="orButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="productoButton">
       <Properties>
@@ -170,6 +176,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Producto"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productoButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="sumaButton">
       <Properties>
@@ -181,6 +190,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Suma"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sumaButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="sumaExButton">
       <Properties>
@@ -192,6 +204,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Suma exclusiva"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sumaExButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="valor1">
       <Properties>
@@ -200,8 +215,8 @@
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
-            <StringItem index="0" value="True"/>
-            <StringItem index="1" value="False"/>
+            <StringItem index="0" value="true"/>
+            <StringItem index="1" value="false"/>
           </StringArray>
         </Property>
       </Properties>
@@ -216,8 +231,8 @@
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
-            <StringItem index="0" value="True"/>
-            <StringItem index="1" value="False"/>
+            <StringItem index="0" value="true"/>
+            <StringItem index="1" value="false"/>
           </StringArray>
         </Property>
       </Properties>

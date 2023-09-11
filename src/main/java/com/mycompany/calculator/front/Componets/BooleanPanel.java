@@ -4,10 +4,16 @@
  */
 package com.mycompany.calculator.front.Componets;
 import com.mycompany.calculator.back.ElementalFunctions.BooleanFunctions;
+import com.mycompany.calculator.back.Exceptions.DivsionZeroError;
+import com.mycompany.calculator.back.Exceptions.TypeError;
+import com.mycompany.calculator.back.OperationCalculator.BooleanOperator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author ASUS
+ * @author Jhomar_Arrieta
  */
 public class BooleanPanel extends javax.swing.JPanel {
 
@@ -54,6 +60,11 @@ public class BooleanPanel extends javax.swing.JPanel {
         andButton.setBackground(new java.awt.Color(142, 205, 221));
         andButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         andButton.setText("Y");
+        andButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                andButtonActionPerformed(evt);
+            }
+        });
 
         NegacionButton.setBackground(new java.awt.Color(142, 205, 221));
         NegacionButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -67,24 +78,44 @@ public class BooleanPanel extends javax.swing.JPanel {
         orButton.setBackground(new java.awt.Color(142, 205, 221));
         orButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         orButton.setText("O");
+        orButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                orButtonActionPerformed(evt);
+            }
+        });
 
         productoButton.setBackground(new java.awt.Color(142, 205, 221));
         productoButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         productoButton.setText("Producto");
+        productoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productoButtonActionPerformed(evt);
+            }
+        });
 
         sumaButton.setBackground(new java.awt.Color(142, 205, 221));
         sumaButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         sumaButton.setText("Suma");
+        sumaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sumaButtonActionPerformed(evt);
+            }
+        });
 
         sumaExButton.setBackground(new java.awt.Color(142, 205, 221));
         sumaExButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         sumaExButton.setText("Suma exclusiva");
+        sumaExButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sumaExButtonActionPerformed(evt);
+            }
+        });
 
         valor1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        valor1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "True", "False" }));
+        valor1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "true", "false" }));
 
         valor2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        valor2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "True", "False" }));
+        valor2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "true", "false" }));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Resultado:");
@@ -155,15 +186,81 @@ public class BooleanPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NegacionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NegacionButtonActionPerformed
-        String var1 = valor1.getSelectedItem().toString();
-        String var2 = valor2.getSelectedItem().toString();
+        String bool1 = valor1.getSelectedItem().toString();
+        String bool2 = valor2.getSelectedItem().toString();
         
-        boolean b1 = Boolean.parseBoolean(var1);
-        boolean b2 = Boolean.parseBoolean(var2);
+        try {
+            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "!"));
+            
+        } catch (TypeError ex) {
+            System.out.println("Error de tipo");
+            //Logger.getLogger(BooleanPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
-        
-
     }//GEN-LAST:event_NegacionButtonActionPerformed
+
+    private void andButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_andButtonActionPerformed
+        String bool1 = valor1.getSelectedItem().toString();
+        String bool2 = valor2.getSelectedItem().toString();
+        System.out.println(bool1);
+        System.out.println(bool2);
+        
+        
+        try {
+            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "&"));
+            
+        } catch (TypeError ex) {
+            JOptionPane.showMessageDialog(null, "datos no validos");
+        }
+    }//GEN-LAST:event_andButtonActionPerformed
+
+    private void orButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orButtonActionPerformed
+        String bool1 = valor1.getSelectedItem().toString();
+        String bool2 = valor2.getSelectedItem().toString();
+        
+        try {
+            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "|"));
+            
+        } catch (TypeError ex) {
+            System.out.println("Error de tipo");
+        }
+    }//GEN-LAST:event_orButtonActionPerformed
+
+    private void productoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productoButtonActionPerformed
+        String bool1 = valor1.getSelectedItem().toString();
+        String bool2 = valor2.getSelectedItem().toString();
+        
+        try {
+            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "&&"));
+            
+        } catch (TypeError ex) {
+            System.out.println("Error de tipo");
+        }
+    }//GEN-LAST:event_productoButtonActionPerformed
+
+    private void sumaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaButtonActionPerformed
+        String bool1 = valor1.getSelectedItem().toString();
+        String bool2 = valor2.getSelectedItem().toString();
+        
+        try {
+            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "||"));
+            
+        } catch (TypeError ex) {
+            System.out.println("Error de tipo");
+        }
+    }//GEN-LAST:event_sumaButtonActionPerformed
+
+    private void sumaExButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaExButtonActionPerformed
+        String bool1 = valor1.getSelectedItem().toString();
+        String bool2 = valor2.getSelectedItem().toString();
+        
+        try {
+            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "^"));
+            
+        } catch (TypeError ex) {
+            System.out.println("Error de tipo");
+        }
+    }//GEN-LAST:event_sumaExButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

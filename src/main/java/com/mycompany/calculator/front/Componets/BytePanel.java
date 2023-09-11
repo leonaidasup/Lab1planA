@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.calculator.front.Componets;
+import com.mycompany.calculator.back.Exceptions.DivsionZeroError;
+import com.mycompany.calculator.back.Exceptions.TypeError;
+import com.mycompany.calculator.back.OperationCalculator.ByteOperator;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -45,30 +49,65 @@ public class BytePanel extends javax.swing.JPanel {
         cambiarBitsButton.setBackground(new java.awt.Color(142, 205, 221));
         cambiarBitsButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         cambiarBitsButton.setText("Cambiar bits");
+        cambiarBitsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarBitsButtonActionPerformed(evt);
+            }
+        });
 
         desplazarIzqButton.setBackground(new java.awt.Color(142, 205, 221));
         desplazarIzqButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         desplazarIzqButton.setText("Desplazar bit a la Izquierda");
+        desplazarIzqButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                desplazarIzqButtonActionPerformed(evt);
+            }
+        });
 
         desplazarDerSignoButton.setBackground(new java.awt.Color(142, 205, 221));
         desplazarDerSignoButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         desplazarDerSignoButton.setText("Desplazar bit a la Derecha con inclusion de signo");
+        desplazarDerSignoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                desplazarDerSignoButtonActionPerformed(evt);
+            }
+        });
 
         desplazarDerCeroButton.setBackground(new java.awt.Color(142, 205, 221));
         desplazarDerCeroButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         desplazarDerCeroButton.setText("Desplazar bit a la Derecha\ncon inclusión de cero");
+        desplazarDerCeroButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                desplazarDerCeroButtonActionPerformed(evt);
+            }
+        });
 
         cambiarBitsAndButton.setBackground(new java.awt.Color(142, 205, 221));
         cambiarBitsAndButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         cambiarBitsAndButton.setText("Cambiar bits AND");
+        cambiarBitsAndButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarBitsAndButtonActionPerformed(evt);
+            }
+        });
 
         cambiarBitsOrButton.setBackground(new java.awt.Color(142, 205, 221));
         cambiarBitsOrButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         cambiarBitsOrButton.setText("Cambiar bits OR");
+        cambiarBitsOrButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarBitsOrButtonActionPerformed(evt);
+            }
+        });
 
         cambiarBitsOrxButton.setBackground(new java.awt.Color(142, 205, 221));
         cambiarBitsOrxButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         cambiarBitsOrxButton.setText("Cambiar bits ORX");
+        cambiarBitsOrxButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cambiarBitsOrxButtonActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Numero entero");
@@ -157,6 +196,90 @@ public class BytePanel extends javax.swing.JPanel {
                 .addContainerGap(62, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cambiarBitsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarBitsButtonActionPerformed
+        String var1 = num1.getText();
+        String var2 = num2.getText();
+        
+        try {
+            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "~"));
+            
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+        }
+    }//GEN-LAST:event_cambiarBitsButtonActionPerformed
+
+    private void desplazarIzqButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desplazarIzqButtonActionPerformed
+        String var1 = num1.getText();
+        String var2 = num2.getText();
+        
+        try {
+            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "<<"));
+            
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+        }
+    }//GEN-LAST:event_desplazarIzqButtonActionPerformed
+
+    private void cambiarBitsAndButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarBitsAndButtonActionPerformed
+        String var1 = num1.getText();
+        String var2 = num2.getText();
+        
+        try {
+            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "&"));
+            
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+        }
+    }//GEN-LAST:event_cambiarBitsAndButtonActionPerformed
+
+    private void desplazarDerSignoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desplazarDerSignoButtonActionPerformed
+        String var1 = num1.getText();
+        String var2 = num2.getText();
+        
+        try {
+            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, ">>"));
+            
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+        }
+    }//GEN-LAST:event_desplazarDerSignoButtonActionPerformed
+
+    private void cambiarBitsOrButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarBitsOrButtonActionPerformed
+        String var1 = num1.getText();
+        String var2 = num2.getText();
+        
+        try {
+            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "|"));
+            
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+        }
+    }//GEN-LAST:event_cambiarBitsOrButtonActionPerformed
+
+    private void desplazarDerCeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desplazarDerCeroButtonActionPerformed
+        String var1 = num1.getText();
+        String var2 = num2.getText();
+        
+        try {
+            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, ">>>"));
+            
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+        }
+    }//GEN-LAST:event_desplazarDerCeroButtonActionPerformed
+
+    private void cambiarBitsOrxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarBitsOrxButtonActionPerformed
+        String var1 = num1.getText();
+        String var2 = num2.getText();
+        
+        try {
+            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "^"));
+            
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+        }
+    }//GEN-LAST:event_cambiarBitsOrxButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
