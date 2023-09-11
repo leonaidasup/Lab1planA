@@ -28,23 +28,31 @@ public class ObjectPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        ConTernarioButton = new javax.swing.JButton();
+        OpBasicasButton = new javax.swing.JButton();
         ObPanelContent = new javax.swing.JPanel();
 
-        jButton1.setText("Condicional Ternario");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        setBackground(new java.awt.Color(255, 250, 221));
+
+        ConTernarioButton.setBackground(new java.awt.Color(142, 205, 221));
+        ConTernarioButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        ConTernarioButton.setText("Condicional Ternario");
+        ConTernarioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ConTernarioButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Operaciones básicas");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        OpBasicasButton.setBackground(new java.awt.Color(142, 205, 221));
+        OpBasicasButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        OpBasicasButton.setText("Operaciones básicas");
+        OpBasicasButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                OpBasicasButtonActionPerformed(evt);
             }
         });
+
+        ObPanelContent.setBackground(new java.awt.Color(255, 250, 221));
 
         javax.swing.GroupLayout ObPanelContentLayout = new javax.swing.GroupLayout(ObPanelContent);
         ObPanelContent.setLayout(ObPanelContentLayout);
@@ -54,7 +62,7 @@ public class ObjectPanel extends javax.swing.JPanel {
         );
         ObPanelContentLayout.setVerticalGroup(
             ObPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+            .addGap(0, 321, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -63,10 +71,10 @@ public class ObjectPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76)
-                .addComponent(jButton1)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addComponent(OpBasicasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(ConTernarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(58, Short.MAX_VALUE))
             .addComponent(ObPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -74,14 +82,14 @@ public class ObjectPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(ConTernarioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(OpBasicasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(ObPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ConTernarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConTernarioButtonActionPerformed
         // TODO add your handling code here:
         TernarioPanel terPanel = new TernarioPanel();
         terPanel.setSize(510,340);
@@ -91,9 +99,9 @@ public class ObjectPanel extends javax.swing.JPanel {
         ObPanelContent.add(terPanel, BorderLayout.CENTER);
         ObPanelContent.revalidate();
         ObPanelContent.repaint();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ConTernarioButtonActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void OpBasicasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OpBasicasButtonActionPerformed
         Object2Panel obPanel = new Object2Panel();
         obPanel.setSize(510,340);
         obPanel.setLocation(0,0);
@@ -102,12 +110,12 @@ public class ObjectPanel extends javax.swing.JPanel {
         ObPanelContent.add(obPanel, BorderLayout.CENTER);
         ObPanelContent.revalidate();
         ObPanelContent.repaint();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_OpBasicasButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ConTernarioButton;
     private javax.swing.JPanel ObPanelContent;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton OpBasicasButton;
     // End of variables declaration//GEN-END:variables
 }

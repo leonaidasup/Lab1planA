@@ -26,116 +26,152 @@ public class BytePanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        cambiarBitsButton = new javax.swing.JButton();
+        desplazarIzqButton = new javax.swing.JButton();
+        desplazarDerSignoButton = new javax.swing.JButton();
+        desplazarDerCeroButton = new javax.swing.JButton();
+        cambiarBitsAndButton = new javax.swing.JButton();
+        cambiarBitsOrButton = new javax.swing.JButton();
+        cambiarBitsOrxButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        num1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        num2 = new javax.swing.JTextField();
+        resultadoLabel = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
-        jButton1.setText("Cambiar bits");
+        setBackground(new java.awt.Color(255, 250, 221));
 
-        jButton2.setText("Desplazar bit a la Izquierda");
+        cambiarBitsButton.setBackground(new java.awt.Color(142, 205, 221));
+        cambiarBitsButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cambiarBitsButton.setText("Cambiar bits");
 
-        jButton3.setText("Desplazar bit a la Derecha con inclusion de signo");
+        desplazarIzqButton.setBackground(new java.awt.Color(142, 205, 221));
+        desplazarIzqButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        desplazarIzqButton.setText("Desplazar bit a la Izquierda");
 
-        jButton4.setText("Desplazar bit a la Derecha\ncon inclusión de cero");
+        desplazarDerSignoButton.setBackground(new java.awt.Color(142, 205, 221));
+        desplazarDerSignoButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        desplazarDerSignoButton.setText("Desplazar bit a la Derecha con inclusion de signo");
 
-        jButton5.setText("Cambiar bits AND");
+        desplazarDerCeroButton.setBackground(new java.awt.Color(142, 205, 221));
+        desplazarDerCeroButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        desplazarDerCeroButton.setText("Desplazar bit a la Derecha\ncon inclusión de cero");
 
-        jButton6.setText("Cambiar bits OR");
+        cambiarBitsAndButton.setBackground(new java.awt.Color(142, 205, 221));
+        cambiarBitsAndButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cambiarBitsAndButton.setText("Cambiar bits AND");
 
-        jButton7.setText("Cambiar bits ORX");
+        cambiarBitsOrButton.setBackground(new java.awt.Color(142, 205, 221));
+        cambiarBitsOrButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cambiarBitsOrButton.setText("Cambiar bits OR");
 
+        cambiarBitsOrxButton.setBackground(new java.awt.Color(142, 205, 221));
+        cambiarBitsOrxButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        cambiarBitsOrxButton.setText("Cambiar bits ORX");
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Numero entero");
 
-        jTextField1.setToolTipText("");
+        num1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        num1.setToolTipText("");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Numero entero");
 
-        jTextField2.setToolTipText("");
+        num2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        num2.setToolTipText("");
 
-        jLabel3.setText(".");
+        resultadoLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        resultadoLabel.setText(".");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setText("Resultado:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton5)
-                            .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4)
-                            .addComponent(jButton3)
-                            .addComponent(jButton2)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(cambiarBitsOrButton)
+                        .addGap(18, 18, 18)
+                        .addComponent(desplazarDerCeroButton))
+                    .addComponent(cambiarBitsOrxButton)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cambiarBitsAndButton)
+                            .addComponent(cambiarBitsButton))
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(desplazarIzqButton)
+                            .addComponent(desplazarDerSignoButton)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField1))
+                            .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(56, 56, 56)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField2)))
-                    .addComponent(jButton7))
-                .addContainerGap(35, Short.MAX_VALUE))
+                            .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(137, 137, 137)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(jLabel4)
+                .addGap(28, 28, 28)
+                .addComponent(resultadoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(76, 76, 76)
+                    .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(cambiarBitsButton)
+                    .addComponent(desplazarIzqButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton5))
+                    .addComponent(desplazarDerSignoButton)
+                    .addComponent(cambiarBitsAndButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton6))
+                    .addComponent(desplazarDerCeroButton)
+                    .addComponent(cambiarBitsOrButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62))
+                .addComponent(cambiarBitsOrxButton)
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(resultadoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JButton cambiarBitsAndButton;
+    private javax.swing.JButton cambiarBitsButton;
+    private javax.swing.JButton cambiarBitsOrButton;
+    private javax.swing.JButton cambiarBitsOrxButton;
+    private javax.swing.JButton desplazarDerCeroButton;
+    private javax.swing.JButton desplazarDerSignoButton;
+    private javax.swing.JButton desplazarIzqButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField num1;
+    private javax.swing.JTextField num2;
+    private javax.swing.JLabel resultadoLabel;
     // End of variables declaration//GEN-END:variables
 }

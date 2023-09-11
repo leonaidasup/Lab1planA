@@ -36,6 +36,8 @@ public class CalculatorView extends javax.swing.JFrame {
         booleanButton = new javax.swing.JButton();
         byteButton = new javax.swing.JButton();
         ObjectButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         contentPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,68 +45,70 @@ public class CalculatorView extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        menuPanel.setBackground(new java.awt.Color(51, 153, 255));
+        menuPanel.setBackground(new java.awt.Color(142, 205, 221));
+        menuPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        arithmeticButton.setText("Aritmeticas");
+        arithmeticButton.setBackground(new java.awt.Color(34, 102, 141));
+        arithmeticButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        arithmeticButton.setForeground(new java.awt.Color(255, 255, 255));
+        arithmeticButton.setText("Aritmeticos");
+        arithmeticButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        arithmeticButton.setBorderPainted(false);
+        arithmeticButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         arithmeticButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 arithmeticButtonActionPerformed(evt);
             }
         });
+        menuPanel.add(arithmeticButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 160, 40));
 
-        booleanButton.setText("Booleanas");
+        booleanButton.setBackground(new java.awt.Color(34, 102, 141));
+        booleanButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        booleanButton.setForeground(new java.awt.Color(255, 255, 255));
+        booleanButton.setText("Booleanos");
+        booleanButton.setBorderPainted(false);
         booleanButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 booleanButtonActionPerformed(evt);
             }
         });
+        menuPanel.add(booleanButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 160, 40));
 
+        byteButton.setBackground(new java.awt.Color(34, 102, 141));
+        byteButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        byteButton.setForeground(new java.awt.Color(255, 255, 255));
         byteButton.setText("de Bytes");
+        byteButton.setBorderPainted(false);
         byteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 byteButtonActionPerformed(evt);
             }
         });
+        menuPanel.add(byteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 160, 40));
 
+        ObjectButton.setBackground(new java.awt.Color(34, 102, 141));
+        ObjectButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        ObjectButton.setForeground(new java.awt.Color(255, 255, 255));
         ObjectButton.setText("de Objetos");
+        ObjectButton.setBorderPainted(false);
         ObjectButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ObjectButtonActionPerformed(evt);
             }
         });
+        menuPanel.add(ObjectButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 160, 40));
 
-        javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
-        menuPanel.setLayout(menuPanelLayout);
-        menuPanelLayout.setHorizontalGroup(
-            menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuPanelLayout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
-                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(booleanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(arithmeticButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ObjectButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(menuPanelLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(byteButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(39, 39, 39))
-        );
-        menuPanelLayout.setVerticalGroup(
-            menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuPanelLayout.createSequentialGroup()
-                .addGap(124, 124, 124)
-                .addComponent(arithmeticButton)
-                .addGap(18, 18, 18)
-                .addComponent(booleanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
-                .addComponent(ObjectButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(byteButton)
-                .addContainerGap(111, Short.MAX_VALUE))
-        );
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("TIPOS DE DATOS");
+        menuPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setText("CALCULADORA");
+        menuPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         jPanel1.add(menuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 410));
 
-        contentPanel.setBackground(new java.awt.Color(102, 204, 255));
+        contentPanel.setBackground(new java.awt.Color(255, 250, 221));
 
         javax.swing.GroupLayout contentPanelLayout = new javax.swing.GroupLayout(contentPanel);
         contentPanel.setLayout(contentPanelLayout);
@@ -221,6 +225,8 @@ public class CalculatorView extends javax.swing.JFrame {
     private javax.swing.JButton booleanButton;
     private javax.swing.JButton byteButton;
     private javax.swing.JPanel contentPanel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel menuPanel;
     // End of variables declaration//GEN-END:variables

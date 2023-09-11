@@ -46,19 +46,27 @@ public class ArithmeticPanel extends javax.swing.JPanel {
         lessThanOrEqualSignButton = new javax.swing.JButton();
         decreaseButton = new javax.swing.JButton();
         resultadoA = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(102, 102, 255));
+        setBackground(new java.awt.Color(255, 250, 221));
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Primer valor");
 
+        variableA1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         variableA1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 variableA1ActionPerformed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Segundo valor");
 
+        variableA2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        additionButton.setBackground(new java.awt.Color(142, 205, 221));
+        additionButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         additionButton.setText("suma");
         additionButton.setPreferredSize(new java.awt.Dimension(105, 23));
         additionButton.addActionListener(new java.awt.event.ActionListener() {
@@ -67,6 +75,8 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        subtractionButton.setBackground(new java.awt.Color(142, 205, 221));
+        subtractionButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         subtractionButton.setText("resta");
         subtractionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +84,8 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        multiplicationButton.setBackground(new java.awt.Color(142, 205, 221));
+        multiplicationButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         multiplicationButton.setText("multiplicación");
         multiplicationButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +93,8 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        divisionButton.setBackground(new java.awt.Color(142, 205, 221));
+        divisionButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         divisionButton.setText("división");
         divisionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +102,8 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        RestButton.setBackground(new java.awt.Color(142, 205, 221));
+        RestButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         RestButton.setText("modulo");
         RestButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +111,8 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        GreaterThanSingButton.setBackground(new java.awt.Color(142, 205, 221));
+        GreaterThanSingButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         GreaterThanSingButton.setText(">");
         GreaterThanSingButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +120,8 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        lessThanSignButton.setBackground(new java.awt.Color(142, 205, 221));
+        lessThanSignButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lessThanSignButton.setText("<");
         lessThanSignButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +129,8 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        increaseButton.setBackground(new java.awt.Color(142, 205, 221));
+        increaseButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         increaseButton.setText("+1");
         increaseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +138,8 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        GreaterThanOrEqualSingButton.setBackground(new java.awt.Color(142, 205, 221));
+        GreaterThanOrEqualSingButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         GreaterThanOrEqualSingButton.setText("≥");
         GreaterThanOrEqualSingButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +147,8 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        lessThanOrEqualSignButton.setBackground(new java.awt.Color(142, 205, 221));
+        lessThanOrEqualSignButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lessThanOrEqualSignButton.setText("≤");
         lessThanOrEqualSignButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,6 +156,8 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        decreaseButton.setBackground(new java.awt.Color(142, 205, 221));
+        decreaseButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         decreaseButton.setText("-1");
         decreaseButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +165,11 @@ public class ArithmeticPanel extends javax.swing.JPanel {
             }
         });
 
+        resultadoA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         resultadoA.setText(".");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel3.setText("Resultado:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -147,23 +179,9 @@ public class ArithmeticPanel extends javax.swing.JPanel {
                 .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(141, 141, 141)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(variableA1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(110, 110, 110)
-                        .addComponent(variableA2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(additionButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(5, 5, 5)
                         .addComponent(subtractionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(multiplicationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(divisionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(RestButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(GreaterThanSingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
@@ -171,29 +189,45 @@ public class ArithmeticPanel extends javax.swing.JPanel {
                         .addGap(10, 10, 10)
                         .addComponent(increaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(GreaterThanOrEqualSingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(multiplicationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(divisionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(RestButton, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(variableA1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(variableA2)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(GreaterThanOrEqualSingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(10, 10, 10)
                         .addComponent(lessThanOrEqualSignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(decreaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(resultadoA, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(138, 138, 138))
+                .addGap(97, 97, 97))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
                 .addGap(4, 4, 4)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(variableA1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(variableA2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(additionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(subtractionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -212,9 +246,11 @@ public class ArithmeticPanel extends javax.swing.JPanel {
                     .addComponent(GreaterThanOrEqualSingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lessThanOrEqualSignButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(decreaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(resultadoA, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(resultadoA, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -339,6 +375,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
     private javax.swing.JButton increaseButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JButton lessThanOrEqualSignButton;
     private javax.swing.JButton lessThanSignButton;
     private javax.swing.JButton multiplicationButton;
