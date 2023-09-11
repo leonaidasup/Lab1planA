@@ -43,8 +43,14 @@ public class ArithmeticOperator {
             case "<=" -> {
                 return ArithmeticFunctions.minusEqualTo(var1, var2);
             }
+            case "<" -> {
+                return ArithmeticFunctions.minusTo(var1, var2);
+            }
             case ">=" -> {
-                return ArithmeticFunctions.greaterIgualQue(var1, var2);
+                return ArithmeticFunctions.greaterEqualTo(var1, var2);
+            }
+            case ">" -> {
+                return ArithmeticFunctions.greaterTo(var1, var2);
             }
             case "++" -> {
                 return ArithmeticFunctions.backwardUnitIncrement(var1);

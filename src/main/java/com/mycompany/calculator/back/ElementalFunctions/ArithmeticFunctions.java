@@ -20,31 +20,37 @@ package com.mycompany.calculator.back.ElementalFunctions;
  */
 public class ArithmeticFunctions {
     public ArithmeticFunctions(){}
-    public static double addition(double a, double b){ // Leonardo
+    public static double addition(double a, double b){
         return a + b;
     };
-    public static double subtraction(double a, double b){ // Leonardo
+    public static double subtraction(double a, double b){
         return a - b;
     };
-    public static double multiplication(double a, double b){ // Leonardo
+    public static double multiplication(double a, double b){
         return a * b;
     };
-    public static double division(double a, double b){ // Leonardo
+    public static double division(double a, double b){
         return a / b;
     };
-    public static double rest(double a, double b){ // Leonardo
+    public static double rest(double a, double b){
         return a % b;
     };
-    public static boolean minusEqualTo(double a, double b){ // Leonardo
+    public static boolean minusEqualTo(double a, double b){
         return a <= b;
     };
-    public static boolean greaterIgualQue(double a, double b){ // Leonardo
+    public static boolean minusTo(double a, double b){
+        return a < b;
+    };
+    public static boolean greaterEqualTo(double a, double b){
         return a >= b;
     };
-    public static double backwardUnitIncrement(double a){ // Leonardo
+    public static boolean greaterTo (double a, double b){
+        return a > b;
+    };
+    public static double backwardUnitIncrement(double a){
         return a ++;
     };
-    public static double forwardUnitIncrement(double a){ // Leonardo
+    public static double forwardUnitIncrement(double a){
         return a --;
     };
 }
