@@ -20,30 +20,16 @@ public class TernaryOperator {
                 return ObjectFuntioncs.different(a, b);
             }
             case ">" -> {
-                try {
-                    ArithmeticFunctions.greaterTo(convertDouble(a), convertDouble(b));
-                } catch (TypeError e) {
-                    throw e;
-                }
+                return ArithmeticFunctions.greaterTo(convertDouble(a), convertDouble(b));
             }  
             case "<" -> {
-                try {
-                    ArithmeticFunctions.minusTo(convertDouble(a), convertDouble(b));
-                } catch (TypeError e) {
-                    throw e;
-                }
+                return ArithmeticFunctions.minusTo(convertDouble(a), convertDouble(b));
             }
-            case "≥" -> {try {
-                    ArithmeticFunctions.greaterEqualTo(convertDouble(a), convertDouble(b));
-                } catch (TypeError e) {
-                    throw e;
-                }
+            case "≥" -> {
+                return ArithmeticFunctions.greaterEqualTo(convertDouble(a), convertDouble(b));
             }
-            case "≤" -> {try {
-                    ArithmeticFunctions.minusEqualTo(convertDouble(a), convertDouble(b));
-                } catch (TypeError e) {
-                    throw e;
-                }
+            case "≤" -> {
+                return ArithmeticFunctions.minusEqualTo(convertDouble(a), convertDouble(b));
             }
         }
         return false;
@@ -55,10 +41,10 @@ public class TernaryOperator {
             throw new TypeError("La entrada" + var + " no es de tipo numerica.");
         }
     }
-    public static Object outPut(String var1, String var2, String operator) throws TypeError{
+    public static Object outPut(String var1, String var2, String operator, String rTrue, String rFalse) throws TypeError{
         try {
-            return result(var1, var2, operator);
-        } catch (TypeError e) {
+            return result(var1, var2, operator)? rTrue : rFalse;
+        } catch (TypeError e){
             throw e;
         }
     }

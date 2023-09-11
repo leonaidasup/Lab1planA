@@ -47,10 +47,6 @@ public class BooleanOperator {
         return Boolean.parseBoolean(var);
     }
     public static Object outPut(String var1, String var2, String operator) throws TypeError{
-       try {
-           return result(convertBoolean(var1), convertBoolean(var2), operator);
-       } catch (TypeError e){
-           throw e;
-       }
+       return result(convertBoolean(var1), convertBoolean(var2), operator);
     }
 }

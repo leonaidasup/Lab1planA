@@ -51,10 +51,6 @@ public class ByteOperator {
         }
     }
     public static Object outPut(String var1, String var2, String operator) throws TypeError{
-        try {
-            return result(convertByte(var1), convertByte(var2), operator);
-        } catch (TypeError e){
-            throw e;
-        }
+        return result(convertByte(var1), convertByte(var2), operator);
     }
 }

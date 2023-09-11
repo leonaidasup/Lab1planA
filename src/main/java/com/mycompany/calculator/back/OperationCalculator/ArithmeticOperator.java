@@ -69,6 +69,6 @@ public class ArithmeticOperator {
         }
     }
     public static Object outPut(String var1, String var2, String operator) throws TypeError, DivsionZeroError{
-            return result(convertDouble(var1), convertDouble(var2), operator);
+        return result(convertDouble(var1), convertDouble(var2), operator);
     }
 }

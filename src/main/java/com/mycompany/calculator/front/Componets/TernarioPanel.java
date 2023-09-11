@@ -158,19 +158,12 @@ public class TernarioPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void operarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_operarButtonActionPerformed
-        String rTrue = respuestaTrue.getText();
-        String rFalse = respuestaFalse.getText();
-        boolean resultado = false;
-        
-        
         try {
-            labelResultado.setText("" + TernaryOperator.outPut(dato1.getText(), dato2.getText(), condicion.getSelectedItem().toString()));
+            labelResultado.setText("" + TernaryOperator.outPut(dato1.getText(), dato2.getText(),
+                    condicion.getSelectedItem().toString(),respuestaTrue.getText(),respuestaFalse.getText()));
         } catch (TypeError e) {
             System.out.println(e.getMessage());
-        }
-        
-        
-        
+        }    
     }//GEN-LAST:event_operarButtonActionPerformed
 
     private void dato2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dato2ActionPerformed
