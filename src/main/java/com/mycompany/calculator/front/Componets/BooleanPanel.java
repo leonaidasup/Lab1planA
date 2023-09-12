@@ -55,7 +55,7 @@ public class BooleanPanel extends javax.swing.JPanel {
 
         andButton.setBackground(new java.awt.Color(142, 205, 221));
         andButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        andButton.setText("Y");
+        andButton.setText("AND");
         andButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 andButtonActionPerformed(evt);
@@ -64,7 +64,7 @@ public class BooleanPanel extends javax.swing.JPanel {
 
         NegacionButton.setBackground(new java.awt.Color(142, 205, 221));
         NegacionButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        NegacionButton.setText("Negacion");
+        NegacionButton.setText("NOT");
         NegacionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NegacionButtonActionPerformed(evt);
@@ -73,7 +73,7 @@ public class BooleanPanel extends javax.swing.JPanel {
 
         orButton.setBackground(new java.awt.Color(142, 205, 221));
         orButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        orButton.setText("O");
+        orButton.setText("OR");
         orButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 orButtonActionPerformed(evt);
@@ -82,7 +82,7 @@ public class BooleanPanel extends javax.swing.JPanel {
 
         productoButton.setBackground(new java.awt.Color(142, 205, 221));
         productoButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        productoButton.setText("Producto");
+        productoButton.setText("*");
         productoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productoButtonActionPerformed(evt);
@@ -91,7 +91,7 @@ public class BooleanPanel extends javax.swing.JPanel {
 
         sumaButton.setBackground(new java.awt.Color(142, 205, 221));
         sumaButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        sumaButton.setText("Suma");
+        sumaButton.setText("+");
         sumaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sumaButtonActionPerformed(evt);
@@ -100,7 +100,7 @@ public class BooleanPanel extends javax.swing.JPanel {
 
         sumaExButton.setBackground(new java.awt.Color(142, 205, 221));
         sumaExButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        sumaExButton.setText("Suma exclusiva");
+        sumaExButton.setText("XOR");
         sumaExButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sumaExButtonActionPerformed(evt);
@@ -144,7 +144,7 @@ public class BooleanPanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(sumaExButton)
                             .addComponent(orButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel3)
@@ -184,7 +184,7 @@ public class BooleanPanel extends javax.swing.JPanel {
     private void NegacionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NegacionButtonActionPerformed
         System.out.println(valor1.getSelectedItem().toString());
         try {
-            resultadoA.setText("" + BooleanOperator.outPut(valor1.getSelectedItem().toString(), valor2.getSelectedItem().toString(), "!"));
+            resultadoA.setText("" + BooleanOperator.outPut(valor1.getSelectedItem().toString(), "true", "!"));
         } catch (TypeError e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }     

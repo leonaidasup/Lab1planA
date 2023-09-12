@@ -283,7 +283,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
 
     private void decreaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decreaseButtonActionPerformed
         try {
-            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "--"));
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), "0", "--"));
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
             JOptionPane.showMessageDialog(null, e.getMessage());
@@ -355,7 +355,7 @@ public class ArithmeticPanel extends javax.swing.JPanel {
 
     private void increaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_increaseButtonActionPerformed
         try {
-            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), variableA2.getText(), "++"));
+            resultadoA.setText("" + ArithmeticOperator.outPut(variableA1.getText(), "0", "++"));
         } catch (TypeError | DivsionZeroError e) {
             System.out.println(e.getMessage());
             JOptionPane.showMessageDialog(null, e.getMessage());

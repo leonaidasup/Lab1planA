@@ -3,24 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.calculator.front.Componets;
-
 import java.awt.BorderLayout;
-
 /**
  *
  * @author Jhomar_Arrieta
  */
-
 public class CalculatorView extends javax.swing.JFrame {
-
     /**
      * Creates new form CalculatorView
      */
     public CalculatorView() {
-        initComponents();
-        
+        initComponents();      
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -140,8 +134,7 @@ public class CalculatorView extends javax.swing.JFrame {
     private void arithmeticButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arithmeticButtonActionPerformed
         ArithmeticPanel aritPanel = new ArithmeticPanel();
         aritPanel.setSize(510,410);
-        aritPanel.setLocation(0,0);
-        
+        aritPanel.setLocation(0,0);    
         contentPanel.removeAll();
         contentPanel.add(aritPanel, BorderLayout.CENTER);
         contentPanel.revalidate();
@@ -151,8 +144,7 @@ public class CalculatorView extends javax.swing.JFrame {
     private void booleanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_booleanButtonActionPerformed
         BooleanPanel boolPanel = new BooleanPanel();
         boolPanel.setSize(510,410);
-        boolPanel.setLocation(0,0);
-        
+        boolPanel.setLocation(0,0);      
         contentPanel.removeAll();
         contentPanel.add(boolPanel, BorderLayout.CENTER);
         contentPanel.revalidate();
@@ -162,8 +154,7 @@ public class CalculatorView extends javax.swing.JFrame {
     private void ObjectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObjectButtonActionPerformed
         ObjectPanel obPanel = new ObjectPanel();
         obPanel.setSize(510,410);
-        obPanel.setLocation(0,0);
-        
+        obPanel.setLocation(0,0);      
         contentPanel.removeAll();
         contentPanel.add(obPanel, BorderLayout.CENTER);
         contentPanel.revalidate();
@@ -171,7 +162,13 @@ public class CalculatorView extends javax.swing.JFrame {
     }//GEN-LAST:event_ObjectButtonActionPerformed
 
     private void byteButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_byteButton1ActionPerformed
-        
+        BytePanel obPanel = new BytePanel();
+        obPanel.setSize(510,410);
+        obPanel.setLocation(0,0); 
+        contentPanel.removeAll();
+        contentPanel.add(obPanel, BorderLayout.CENTER);
+        contentPanel.revalidate();
+        contentPanel.repaint();
     }//GEN-LAST:event_byteButton1ActionPerformed
 
     /**

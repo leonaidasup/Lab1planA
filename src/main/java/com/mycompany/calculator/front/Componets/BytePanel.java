@@ -44,7 +44,7 @@ public class BytePanel extends javax.swing.JPanel {
 
         cambiarBitsButton.setBackground(new java.awt.Color(142, 205, 221));
         cambiarBitsButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cambiarBitsButton.setText("Cambiar bits");
+        cambiarBitsButton.setText("~");
         cambiarBitsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cambiarBitsButtonActionPerformed(evt);
@@ -53,7 +53,7 @@ public class BytePanel extends javax.swing.JPanel {
 
         desplazarIzqButton.setBackground(new java.awt.Color(142, 205, 221));
         desplazarIzqButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        desplazarIzqButton.setText("Desplazar bit a la Izquierda");
+        desplazarIzqButton.setText("<<");
         desplazarIzqButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 desplazarIzqButtonActionPerformed(evt);
@@ -62,7 +62,7 @@ public class BytePanel extends javax.swing.JPanel {
 
         desplazarDerSignoButton.setBackground(new java.awt.Color(142, 205, 221));
         desplazarDerSignoButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        desplazarDerSignoButton.setText("Desplazar bit a la Derecha con inclusion de signo");
+        desplazarDerSignoButton.setText(">>");
         desplazarDerSignoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 desplazarDerSignoButtonActionPerformed(evt);
@@ -71,7 +71,7 @@ public class BytePanel extends javax.swing.JPanel {
 
         desplazarDerCeroButton.setBackground(new java.awt.Color(142, 205, 221));
         desplazarDerCeroButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        desplazarDerCeroButton.setText("Desplazar bit a la Derecha\ncon inclusión de cero");
+        desplazarDerCeroButton.setText(">>>");
         desplazarDerCeroButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 desplazarDerCeroButtonActionPerformed(evt);
@@ -80,7 +80,7 @@ public class BytePanel extends javax.swing.JPanel {
 
         cambiarBitsAndButton.setBackground(new java.awt.Color(142, 205, 221));
         cambiarBitsAndButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cambiarBitsAndButton.setText("Cambiar bits AND");
+        cambiarBitsAndButton.setText("OR");
         cambiarBitsAndButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cambiarBitsAndButtonActionPerformed(evt);
@@ -89,7 +89,7 @@ public class BytePanel extends javax.swing.JPanel {
 
         cambiarBitsOrButton.setBackground(new java.awt.Color(142, 205, 221));
         cambiarBitsOrButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cambiarBitsOrButton.setText("Cambiar bits OR");
+        cambiarBitsOrButton.setText("AND");
         cambiarBitsOrButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cambiarBitsOrButtonActionPerformed(evt);
@@ -98,7 +98,7 @@ public class BytePanel extends javax.swing.JPanel {
 
         cambiarBitsOrxButton.setBackground(new java.awt.Color(142, 205, 221));
         cambiarBitsOrxButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        cambiarBitsOrxButton.setText("Cambiar bits ORX");
+        cambiarBitsOrxButton.setText("XOR");
         cambiarBitsOrxButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cambiarBitsOrxButtonActionPerformed(evt);
@@ -128,21 +128,8 @@ public class BytePanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addContainerGap(130, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(cambiarBitsOrButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(desplazarDerCeroButton))
-                    .addComponent(cambiarBitsOrxButton)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cambiarBitsAndButton)
-                            .addComponent(cambiarBitsButton))
-                        .addGap(6, 6, 6)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(desplazarIzqButton)
-                            .addComponent(desplazarDerSignoButton)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -151,8 +138,23 @@ public class BytePanel extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(137, 137, 137)))
-                .addContainerGap())
+                        .addGap(137, 137, 137))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cambiarBitsOrButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(desplazarDerCeroButton))
+                            .addComponent(cambiarBitsOrxButton)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cambiarBitsAndButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(cambiarBitsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(desplazarIzqButton)
+                                    .addComponent(desplazarDerSignoButton))))
+                        .addGap(12, 12, 12))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(131, 131, 131)
                 .addComponent(jLabel4)
@@ -195,7 +197,7 @@ public class BytePanel extends javax.swing.JPanel {
 
     private void cambiarBitsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarBitsButtonActionPerformed
         try {
-            resultadoLabel.setText("" + ByteOperator.outPut(num1.getText(), num2.getText(), "~"));
+            resultadoLabel.setText("" + ByteOperator.outPut(num1.getText(), "0", "~"));
         } catch (TypeError e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
