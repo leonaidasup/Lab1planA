@@ -3,24 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.calculator.front.Componets;
-import com.mycompany.calculator.back.Exceptions.DivsionZeroError;
 import com.mycompany.calculator.back.Exceptions.TypeError;
 import com.mycompany.calculator.back.OperationCalculator.ByteOperator;
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author Jhomar_Arrieta
  */
 public class BytePanel extends javax.swing.JPanel {
-
     /**
      * Creates new form BytePanel
      */
     public BytePanel() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -198,89 +194,60 @@ public class BytePanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cambiarBitsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarBitsButtonActionPerformed
-        String var1 = num1.getText();
-        String var2 = num2.getText();
-        
         try {
-            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "~"));
-            
+            resultadoLabel.setText("" + ByteOperator.outPut(num1.getText(), num2.getText(), "~"));
         } catch (TypeError e) {
-            JOptionPane.showMessageDialog(null, "Uno de los datos ingresados no es válido");
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_cambiarBitsButtonActionPerformed
 
     private void desplazarIzqButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desplazarIzqButtonActionPerformed
-        String var1 = num1.getText();
-        String var2 = num2.getText();
-        
         try {
-            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "<<"));
-            
+            resultadoLabel.setText("" + ByteOperator.outPut(num1.getText(), num2.getText(), "<<"));  
         } catch (TypeError e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_desplazarIzqButtonActionPerformed
 
     private void cambiarBitsAndButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarBitsAndButtonActionPerformed
-        String var1 = num1.getText();
-        String var2 = num2.getText();
-        
         try {
-            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "&"));
-            
+            resultadoLabel.setText("" + ByteOperator.outPut(num1.getText(), num2.getText(), "&"));   
         } catch (TypeError e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_cambiarBitsAndButtonActionPerformed
 
     private void desplazarDerSignoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desplazarDerSignoButtonActionPerformed
-        String var1 = num1.getText();
-        String var2 = num2.getText();
-        
         try {
-            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, ">>"));
-            
+            resultadoLabel.setText("" + ByteOperator.outPut(num1.getText(), num2.getText(), ">>"));    
         } catch (TypeError e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_desplazarDerSignoButtonActionPerformed
 
     private void cambiarBitsOrButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarBitsOrButtonActionPerformed
-        String var1 = num1.getText();
-        String var2 = num2.getText();
-        
         try {
-            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "|"));
-            
+            resultadoLabel.setText("" + ByteOperator.outPut(num1.getText(), num2.getText(), "|"));         
         } catch (TypeError e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_cambiarBitsOrButtonActionPerformed
 
     private void desplazarDerCeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_desplazarDerCeroButtonActionPerformed
-        String var1 = num1.getText();
-        String var2 = num2.getText();
-        
         try {
-            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, ">>>"));
-            
+            resultadoLabel.setText("" + ByteOperator.outPut(num1.getText(), num2.getText(), ">>>"));     
         } catch (TypeError e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_desplazarDerCeroButtonActionPerformed
 
     private void cambiarBitsOrxButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cambiarBitsOrxButtonActionPerformed
-        String var1 = num1.getText();
-        String var2 = num2.getText();
-        
         try {
-            resultadoLabel.setText("" + ByteOperator.outPut(var1, var2, "^"));
-            
+            resultadoLabel.setText("" + ByteOperator.outPut(num1.getText(), num2.getText(), "^"));
         } catch (TypeError e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_cambiarBitsOrxButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cambiarBitsAndButton;

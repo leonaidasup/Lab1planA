@@ -41,10 +41,11 @@ public class BooleanOperator {
         return false;
     }
     public static boolean convertBoolean(String var) throws TypeError{
-        if (!"true".equals(var) || !"false".equals(var)) {
+        System.out.println(var);
+        if (!("true".equals(var) || "false".equals(var))) {
             throw new TypeError("La entrada " + var + " no es de tipo Booleana.");
         }
-        return Boolean.parseBoolean(var);
+        return "true".equals(var);
     }
     public static Object outPut(String var1, String var2, String operator) throws TypeError{
        return result(convertBoolean(var1), convertBoolean(var2), operator);

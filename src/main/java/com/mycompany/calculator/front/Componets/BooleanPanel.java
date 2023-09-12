@@ -3,12 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.mycompany.calculator.front.Componets;
-import com.mycompany.calculator.back.ElementalFunctions.BooleanFunctions;
-import com.mycompany.calculator.back.Exceptions.DivsionZeroError;
 import com.mycompany.calculator.back.Exceptions.TypeError;
 import com.mycompany.calculator.back.OperationCalculator.BooleanOperator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -186,82 +182,53 @@ public class BooleanPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NegacionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NegacionButtonActionPerformed
-        String bool1 = valor1.getSelectedItem().toString();
-        String bool2 = valor2.getSelectedItem().toString();
-        
+        System.out.println(valor1.getSelectedItem().toString());
         try {
-            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "!"));
-            
-        } catch (TypeError ex) {
-            System.out.println("Error de tipo");
-            //Logger.getLogger(BooleanPanel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+            resultadoA.setText("" + BooleanOperator.outPut(valor1.getSelectedItem().toString(), valor2.getSelectedItem().toString(), "!"));
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }     
     }//GEN-LAST:event_NegacionButtonActionPerformed
 
     private void andButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_andButtonActionPerformed
-        String bool1 = valor1.getSelectedItem().toString();
-        String bool2 = valor2.getSelectedItem().toString();
-        System.out.println(bool1);
-        System.out.println(bool2);
-        
-        
         try {
-            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "&"));
-            
-        } catch (TypeError ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage() );
+            resultadoA.setText("" + BooleanOperator.outPut(valor1.getSelectedItem().toString(), valor2.getSelectedItem().toString(), "&"));
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_andButtonActionPerformed
 
     private void orButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orButtonActionPerformed
-        String bool1 = valor1.getSelectedItem().toString();
-        String bool2 = valor2.getSelectedItem().toString();
-        
         try {
-            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "|"));
-            
-        } catch (TypeError ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage() );
+            resultadoA.setText("" + BooleanOperator.outPut(valor1.getSelectedItem().toString(), valor2.getSelectedItem().toString(), "|"));
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_orButtonActionPerformed
 
     private void productoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productoButtonActionPerformed
-        String bool1 = valor1.getSelectedItem().toString();
-        String bool2 = valor2.getSelectedItem().toString();
-        
         try {
-            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "&&"));
-            
-        } catch (TypeError ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage() );
+            resultadoA.setText("" + BooleanOperator.outPut(valor1.getSelectedItem().toString(), valor2.getSelectedItem().toString(), "&&"));      
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_productoButtonActionPerformed
 
     private void sumaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaButtonActionPerformed
-        String bool1 = valor1.getSelectedItem().toString();
-        String bool2 = valor2.getSelectedItem().toString();
-        
         try {
-            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "||"));
-            
-        } catch (TypeError ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage() );
+            resultadoA.setText("" + BooleanOperator.outPut(valor1.getSelectedItem().toString(), valor2.getSelectedItem().toString(), "||"));
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_sumaButtonActionPerformed
 
     private void sumaExButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaExButtonActionPerformed
-        String bool1 = valor1.getSelectedItem().toString();
-        String bool2 = valor2.getSelectedItem().toString();
-        
         try {
-            resultadoA.setText("" + BooleanOperator.outPut(bool1, bool2, "^"));
-            
-        } catch (TypeError ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage() );
+            resultadoA.setText("" + BooleanOperator.outPut(valor1.getSelectedItem().toString(), valor2.getSelectedItem().toString(), "^"));
+        } catch (TypeError e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }//GEN-LAST:event_sumaExButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton NegacionButton;
